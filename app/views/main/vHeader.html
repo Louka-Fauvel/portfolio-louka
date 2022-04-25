@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% block header %}
+	<base href="{{config["siteUrl"]}}">
+	<meta charset="UTF-8">
+	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+	<title>portfolio-louka-fauvel</title>
+{% endblock %}
+{% block css %}
+	{{ css('https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css',{nonce: nonce}) }}
+	{{css('css/style.css', {nonce: nonce})}}
+{% endblock %}
+</head>
+{% if pageinfo == '/index.php' %}
+<body class="background-page-accueil" onload="rainActive()">
+{% else %}
+<body>
+{% endif %}
+{% block head %}
+	<div class="main-container">
+		<header class="">
+			<div class="ui container">
+				<a href="/" class="ui inverted violet basic button">Louka Fauvel</a>
+				<div class="ui buttons">
+					<a href="/" class="ui inverted violet basic button">Accueil</a>
+					<a href="{{path('main.a_propos')}}" class="ui inverted violet basic button">A propos</a>
+					<a href="{{path('main.parcours')}}" class="ui inverted violet basic button">Parcours</a>
+					<a href="{{path('main.projets')}}" class="ui inverted violet basic button">Projets</a>
+					<a href="{{path('main.contact')}}" class="ui inverted violet basic button">Contact</a>
+				</div>
+			</div>
+		</header>
+		<main>
+			<div class="ui container">
+{% endblock %}

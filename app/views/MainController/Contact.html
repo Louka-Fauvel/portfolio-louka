@@ -1,0 +1,37 @@
+<div class="ui equal width left aligned padded grid">
+    <div class="row">
+
+        <div class="ui segment column">
+            <p>Louka Fauvel</p>
+            <p>Localisation</p>
+            <p>14000 Caen, France</p>
+            <a href="https://www.facebook.com/louka.fauvel?fref=mentions" target="_blank"><i class="icon-contact facebook square icon"></i></a>
+            <a href="https://www.linkedin.com/in/louka-fauvel-268411209/" target="_blank"><i class="icon-contact linkedin alternate icon"></i></a>
+            <a href="https://github.com/Louka-Fauvel" target="_blank"><i class="icon-contact github icon"></i></a>
+        </div>
+
+        <div class="ui segment column">
+            <form class="ui form" action="{{path('main.contactvalide')}}" method="post">
+
+                <div class="field">
+                    <label>Nom Prénom</label>
+                    <input type="text" name="name" placeholder="Votre nom et prénom" required>
+                </div>
+
+                <div class="field">
+                    <label>Email</label>
+                    <input type="text" name="email" placeholder="Votre email" required>
+                </div>
+
+                <div class="field">
+                    <label>Message</label>
+                    <textarea name="message" placeholder="Votre message" required></textarea>
+                </div>
+
+                <input class="ui green button" type="submit" value="Envoyez">
+
+            </form>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,86 @@
+<h1>Parcours</h1>
+<h2>Expériences</h2>
+
+<div class="ui equal width left aligned padded grid">
+    {% for experience in experiences %}
+    {% if experience['id'] % 2==0 %}
+    <div class="row">
+    {% endif %}
+
+        <div class="ui segment column">
+            <img class="ui small rounded image" src="assets/img/{{experience['img']}}">
+            <h3>{{experience['titre']}}</h3>
+            <div class="ui compact segment"><b>{{experience['date']}}</b></div>
+            <p>{{experience['semaines']}}</p>
+            <p>{{experience['lieu']}}</p>
+            <p>{{experience['info']}}</p>
+            <p>
+                <b>{{experience['titrelangage']}}</b> {{experience['infolangage']}}<br>
+                <b>{{experience['titreoutil']}}</b> {{experience['infooutil']}}
+            </p>
+        </div>
+    {% if experience['id'] % 2!=0 or experience['fin'] == true %}
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+
+<h2>Formations</h2>
+
+<div class="ui equal width left aligned padded grid">
+    {% for formation in formations %}
+    {% if formation['id'] % 2==0 %}
+    <div class="row">
+    {% endif %}
+
+        <div class="ui segment column">
+            <img class="ui small rounded image" src="assets/img/{{formation['img']}}">
+            <h3>{{formation['titre']}}</h3>
+            <div class="ui compact segment"><b>{{formation['date']}}</b></div>
+            <p>{{formation['lieu']}}</p>
+            <p>{{formation['info']}}</p>
+            <p>
+                <b>{{formation['langageoutil']}}</b> {{formation['infolangue']}}<br>
+                <b>{{formation['titreconcept']}}</b> {{formation['infoconcepts']}}
+            </p>
+        </div>
+    {% if formation['id'] % 2!=0 or formation['fin'] == true %}
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+
+<h2>Certifications</h2>
+
+<div class="ui equal width left aligned padded grid">
+    <div class="row">
+    {% for certification in certifications %}
+
+        <div class="ui segment column">
+            <img class="ui large rounded image" src="assets/img/{{certification['img']}}">
+        </div>
+
+    {% endfor %}
+    </div>
+</div>
+
+<h2>Veille technologique</h2>
+
+<div class="ui equal width left aligned padded grid">
+    {% for veille in veilles %}
+    {% if veille['id'] % 2==0 %}
+    <div class="row">
+    {% endif %}
+
+        <div class="ui segment column">
+            <img class="ui small rounded image" src="assets/img/{{veille['img']}}">
+            <h3>{{veille['titre']}}</h3>
+            <div class="ui compact segment"><b>{{veille['date']}}</b></div>
+            <p>{{veille['lieu']}}</p>
+            <p><b>Objectif :</b> {{veille['info']}}</p>
+        </div>
+    {% if veille['id'] % 2!=0 or veille['fin'] == true %}
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
