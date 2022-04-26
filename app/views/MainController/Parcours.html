@@ -57,7 +57,11 @@
     {% for certification in certifications %}
 
         <div class="ui segment column">
-            <img class="ui large rounded image" src="assets/img/{{certification['img']}}">
+            <img class="ui large rounded image" src="assets/img/{{certification['img']}}" onclick="modalRGPD('.ui.basic.modal.certif')">
+        </div>
+
+        <div class="ui basic modal certif{{certification['id']}}">
+            <img class="ui fluid image" src="assets/img/{{certification['img']}}">
         </div>
 
     {% endfor %}
