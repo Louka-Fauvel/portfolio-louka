@@ -101,3 +101,14 @@ main .ui.container{
 .icon-contact.icon {
 	font-size: 3em;
 }
+
+.reveal {
+	opacity: 0;
+	transform: translateY(-30px);
+}
+
+.reveal-visible {
+	opacity: 1;
+	transform: translateY(0);
+	transition: .3s;
+}
