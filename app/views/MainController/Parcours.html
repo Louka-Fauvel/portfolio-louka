@@ -1,10 +1,10 @@
-<h1>Parcours</h1>
-<h2>Expériences</h2>
+<h1 class="reveal-invisible-3">Parcours</h1>
+<h2 class="reveal-invisible-2">Expériences</h2>
 
 <div class="ui equal width left aligned padded grid">
     {% for experience in experiences %}
     {% if experience['id'] % 2==0 %}
-    <div class="row">
+    <div class="row reveal-invisible-3">
     {% endif %}
 
         <div class="ui segment column">
@@ -25,12 +25,12 @@
     {% endfor %}
 </div>
 
-<h2>Formations</h2>
+<h2 class="reveal-invisible-2">Formations</h2>
 
-<div class="ui equal width left aligned padded grid reveal">
+<div class="ui equal width left aligned padded grid">
     {% for formation in formations %}
     {% if formation['id'] % 2==0 %}
-    <div class="row">
+    <div class="row reveal-invisible">
     {% endif %}
 
         <div class="ui segment column">
@@ -50,10 +50,10 @@
     {% endfor %}
 </div>
 
-<h2>Certifications</h2>
+<h2 class="reveal-invisible-2">Certifications</h2>
 
 <div class="ui equal width left aligned padded grid">
-    <div class="row">
+    <div class="row reveal-invisible">
     {% for certification in certifications %}
 
         <div class="ui segment column">
@@ -68,12 +68,12 @@
     </div>
 </div>
 
-<h2>Veille technologique</h2>
+<h2 class="reveal-invisible-2">Veille technologique</h2>
 
 <div class="ui equal width left aligned padded grid">
     {% for veille in veilles %}
     {% if veille['id'] % 2==0 %}
-    <div class="row">
+    <div class="row reveal-invisible">
     {% endif %}
 
         <div class="ui segment column">

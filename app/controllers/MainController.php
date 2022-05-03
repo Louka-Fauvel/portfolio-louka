@@ -56,7 +56,7 @@ class MainController extends \controllers\ControllerBase{
         ];
 
         $formations = [
-            ["id"=>0, "img"=>"SupAvenir.png", "titre"=>"BTS SIO - SupAvenir Sainte-Ursule", "date"=>"2020 - 2022",
+            ["id"=>0, "img"=>"SupAvenir.png", "titre"=>"BTS SIO - CaenSup Sainte-Ursule", "date"=>"2020 - 2022",
                 "lieu"=>"Caen, Normandie", "info"=>"",
                 "langageoutil"=>"Langages et outils :", "infolangue"=>"HTML/CSS, PHP, Framework (Bootstrap, Ubiquity), Python, SQL, Javascript, JAVA, Flutter Dart",
                 "titreconcept"=>"Concepts :", "infoconcepts"=>"Algorithmique, POO, méthode Merise"],
