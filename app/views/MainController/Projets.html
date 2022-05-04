@@ -1,18 +1,18 @@
-<h2>Projets réalisés pendant mon BTS SIO option SLAM</h2>
-<h2>PROJETS SLAM</h2>
+<h2 class="reveal-invisible-1">Projets réalisés pendant mon BTS SIO option SLAM</h2>
+<h2 class="reveal-invisible-2">PROJETS SLAM</h2>
 <div class="ui equal width left aligned padded grid">
 
-    <h3>1ère année BTS SIO</h3>
+    <h3 class="reveal-invisible-2">1ère année BTS SIO</h3>
 
     {% for Annee1slamprojet in Annee1slamprojets %}
     {% if Annee1slamprojet['id'] % 2==0 %}
-    <div class="row">
+    <div class="row reveal-invisible-3">
     {% endif %}
 
         <div class="ui segment column">
-            <h2>{{Annee1slamprojet['titre']}} {{Annee1slamprojet['titreinfo']}}</h2>
-            <a href="{{path('project.info', [Annee1slamprojet.route])}}">
-                <img class="ui {{Annee1slamprojet['tailleimg']}} rounded image" src="/assets/img/{{Annee1slamprojet['img']}}">
+            <h2 class="reveal-invisible-4">{{Annee1slamprojet['titre']}} {{Annee1slamprojet['titreinfo']}}</h2>
+            <a class="reveal-invisible-5" href="{{path('project.info', [Annee1slamprojet.route])}}">
+                <img class="ui {{Annee1slamprojet['tailleimg']}} rounded image reveal-invisible-5" src="/assets/img/{{Annee1slamprojet['img']}}">
             </a>
         </div>
 
@@ -21,17 +21,17 @@
     {% endif %}
     {% endfor %}
 
-    <h3>2ème année BTS SIO</h3>
+    <h3 class="reveal-invisible-2">2ème année BTS SIO</h3>
 
     {% for Annee2slamprojet in Annee2slamprojets %}
     {% if Annee2slamprojet['id'] % 2==0 %}
-    <div class="row">
+    <div class="row reveal-invisible-3">
         {% endif %}
 
         <div class="ui segment column">
-            <h2>{{Annee2slamprojet['titre']}} {{Annee2slamprojet['titreinfo']}}</h2>
-            <a href="{{path('project.info', [Annee2slamprojet.route])}}">
-                <img class="ui {{Annee2slamprojet['tailleimg']}} rounded image" src="/assets/img/{{Annee2slamprojet['img']}}">
+            <h2 class="reveal-invisible-4">{{Annee2slamprojet['titre']}} {{Annee2slamprojet['titreinfo']}}</h2>
+            <a class="reveal-invisible-5" href="{{path('project.info', [Annee2slamprojet.route])}}">
+                <img class="ui {{Annee2slamprojet['tailleimg']}} rounded image reveal-invisible-5" src="/assets/img/{{Annee2slamprojet['img']}}">
             </a>
         </div>
 
@@ -41,4 +41,4 @@
     {% endfor %}
 </div>
 
-<h2>PROJETS SUPPORT INFORMATIQUE</h2>
+<h2 class="reveal-invisible-2">PROJETS SUPPORT INFORMATIQUE</h2>

@@ -1,45 +1,45 @@
-<h2>{{info['titre']}} {{info['titreinfo']}}</h2>
-<h2>Screenshot :</h2>
-<img class="ui huge rounded image" src="/assets/img/{{info['img']}}">
+<h2 class="reveal-invisible-1">{{info['titre']}} {{info['titreinfo']}}</h2>
+<h2 class="reveal-invisible-2">Screenshot :</h2>
+<img class="ui huge rounded image reveal-invisible-3" src="/assets/img/{{info['img']}}">
 
 {% if info['video'] != '' %}
-<h2>Vidéo :</h2>
-<iframe width="560" height="315" class="ui rounded image" src="{{info['video']}}" title="WebPOO" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2 class="reveal-invisible-2">Vidéo :</h2>
+<iframe width="560" height="315" class="ui rounded image reveal-invisible-3" src="{{info['video']}}" title="WebPOO" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 {% endif %}
 
-<h2>Objectif :</h2>
+<h2 class="reveal-invisible-2">Objectif :</h2>
 
-<p>{{info['objectif']}}</p>
+<p class="reveal-invisible-3">{{info['objectif']}}</p>
 
 {% if info['lienconsigne'] != '' %}
-<h2>Lien des consignes : <a href="{{info['lienconsigne']}}" target="_blank">ici</a></h2>
+<h2 class="reveal-invisible-2">Lien des consignes : <a href="{{info['lienconsigne']}}" target="_blank">ici</a></h2>
 {% endif %}
 
 {% if info['liengithub'] != '' %}
-<h2>Lien du Github : <a href="{{info['liengithub']}}" target="_blank">ici</a></h2>
+<h2 class="reveal-invisible-2">Lien du Github : <a href="{{info['liengithub']}}" target="_blank">ici</a></h2>
 {% elseif info['liencontenu'] != '' %}
-<h2>Lien du contenu du projet : <a href="{{info['liencontenu']}}" target="_blank">ici</a></h2>
+<h2 class="reveal-invisible-2">Lien du contenu du projet : <a href="{{info['liencontenu']}}" target="_blank">ici</a></h2>
 {% endif %}
 
 {% if info['themes'] or info['pluggins'] %}
-<h2>Thèmes utilisés :</h2>
-<p>{{info['themes']}}</p>
+<h2 class="reveal-invisible-2">Thèmes utilisés :</h2>
+<p class="reveal-invisible-3">{{info['themes']}}</p>
 
-<h2>Pluggins utilisés :</h2>
-<p>{{info['pluggins']}}</p>
+<h2 class="reveal-invisible-2">Pluggins utilisés :</h2>
+<p class="reveal-invisible-3">{{info['pluggins']}}</p>
 {% elseif info['langages'] %}
-<h2>Langages utilisés :</h2>
-<p>{{info['langages']}}</p>
+<h2 class="reveal-invisible-2">Langages utilisés :</h2>
+<p class="reveal-invisible-3">{{info['langages']}}</p>
 {% endif %}
 
-<h2>Outils utilisés :</h2>
+<h2 class="reveal-invisible-2">Outils utilisés :</h2>
 
-<p>{{info['outils']}}</p>
+<p class="reveal-invisible-3">{{info['outils']}}</p>
 
-<h2>Compétences abordées :</h2>
+<h2 class="reveal-invisible-2">Compétences abordées :</h2>
 
-<p>(à rajouter)</p>
+<p class="reveal-invisible-3">(à rajouter)</p>
 
-<h2>Date du projet :</h2>
+<h2 class="reveal-invisible-2">Date du projet :</h2>
 
-<p>{{info['date']}}</p>
+<p class="reveal-invisible-3">{{info['date']}}</p>
