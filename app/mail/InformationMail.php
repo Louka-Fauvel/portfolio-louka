@@ -25,7 +25,7 @@ class InformationMail extends \Ubiquity\mailer\AbstractMail {
 	protected function initialize(){
 		$this->subject = 'Message title';
 		$this->from(MailerManager::loadConfig()['from']??'from@organization');
-		//$this->to($to);
+		$this->to(MailerManager::loadConfig()['to']??'louka.fauvel@sts-sio-caen.info');
 	}
 
 	/**
