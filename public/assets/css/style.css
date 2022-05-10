@@ -98,8 +98,22 @@ main .ui.container{
 	}
 }
 
+.image-cursor {
+	cursor: pointer;
+}
+
 .icon-contact.icon {
 	font-size: 3em;
+}
+
+.bouton-active {
+	opacity: 1 !important;
+	pointer-events: visible !important;
+}
+
+.bouton-disable {
+	opacity: .45;
+	pointer-events: none;
 }
 
 [class*="reveal-invisible-"] {

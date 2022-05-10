@@ -2,7 +2,7 @@
 <h2 class="reveal-invisible-2">PROJETS SLAM</h2>
 <div class="ui equal width left aligned padded grid">
 
-    <h3 class="reveal-invisible-2">1ère année BTS SIO</h3>
+    <h3 id="Annee1slamprojet" class="reveal-invisible-2">1ère année BTS SIO</h3>
 
     {% for Annee1slamprojet in Annee1slamprojets %}
     {% if Annee1slamprojet['id'] % 2==0 %}
@@ -21,7 +21,7 @@
     {% endif %}
     {% endfor %}
 
-    <h3 class="reveal-invisible-2">2ème année BTS SIO</h3>
+    <h3 id="Annee2slamprojet" class="reveal-invisible-2">2ème année BTS SIO</h3>
 
     {% for Annee2slamprojet in Annee2slamprojets %}
     {% if Annee2slamprojet['id'] % 2==0 %}
@@ -41,4 +41,45 @@
     {% endfor %}
 </div>
 
-<h2 class="reveal-invisible-2">PROJETS SUPPORT INFORMATIQUE</h2>
+<h2 class="reveal-invisible-2">COMPTES-RENDUS TP SUPPORT INFORMATIQUE</h2>
+<div class="ui equal width left aligned padded grid">
+
+    <h3 id="Annee1bloc1projet" class="reveal-invisible-2">1ère année BTS SIO</h3>
+
+    {% for Annee1bloc1projet in Annee1bloc1projets %}
+    {% if Annee1bloc1projet['id'] % 2==0 %}
+    <div class="row reveal-invisible-3">
+        {% endif %}
+
+        <div class="ui segment column">
+            <h2 class="reveal-invisible-4">{{Annee1bloc1projet['titre']}}</h2>
+            <a class="reveal-invisible-5" href="assets/doc/{{Annee1bloc1projet['route']}}" target="_blank">
+                <img class="ui {{Annee1bloc1projet['tailleimg']}} rounded image reveal-invisible-5" src="/assets/img/{{Annee1bloc1projet['img']}}">
+            </a>
+        </div>
+
+        {% if Annee1bloc1projet['id'] % 2!=0 or Annee1bloc1projet['fin'] == true %}
+    </div>
+    {% endif %}
+    {% endfor %}
+
+    <h3 id="Annee2bloc1projet" class="reveal-invisible-2">2ème année BTS SIO</h3>
+
+    {% for Annee2bloc1projet in Annee2bloc1projets %}
+    {% if Annee2bloc1projet['id'] % 2==0 %}
+    <div class="row reveal-invisible-3">
+        {% endif %}
+
+        <div class="ui segment column">
+            <h2 class="reveal-invisible-4">{{Annee2bloc1projet['titre']}}</h2>
+            <a class="reveal-invisible-5" href="assets/doc/{{Annee2bloc1projet['route']}}" target="_blank">
+                <img class="ui {{Annee2bloc1projet['tailleimg']}} rounded image reveal-invisible-5" src="/assets/img/{{Annee2bloc1projet['img']}}">
+            </a>
+        </div>
+
+        {% if Annee2bloc1projet['id'] % 2!=0 or Annee2bloc1projet['fin'] == true %}
+    </div>
+    {% endif %}
+    {% endfor %}
+
+</div>

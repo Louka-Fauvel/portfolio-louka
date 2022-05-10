@@ -1,10 +1,10 @@
 <h2 class="reveal-invisible-1">{{info['titre']}} {{info['titreinfo']}}</h2>
 <h2 class="reveal-invisible-2">Screenshot :</h2>
-<img class="ui huge rounded image reveal-invisible-3" src="/assets/img/{{info['img']}}">
+<img class="ui {{info['tailleimg']}} rounded image reveal-invisible-3" src="/assets/img/{{info['img']}}">
 
 {% if info['video'] != '' %}
 <h2 class="reveal-invisible-2">Vidéo :</h2>
-<iframe width="560" height="315" class="ui rounded image reveal-invisible-3" src="{{info['video']}}" title="WebPOO" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" class="ui rounded image reveal-invisible-3" src="{{info['video']}}" title="WebPOO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 {% endif %}
 
 <h2 class="reveal-invisible-2">Objectif :</h2>
@@ -38,7 +38,18 @@
 
 <h2 class="reveal-invisible-2">Compétences abordées :</h2>
 
-<p class="reveal-invisible-3">(à rajouter)</p>
+<p class="reveal-invisible-3">
+    {{info['competences']}}
+    {% if info['competences2'] != '' %}
+        <br>{{info['competences2']}}
+    {% endif %}
+    {% if info['competences3'] != '' %}
+        <br>{{info['competences3']}}
+    {% endif %}
+    {% if info['competences4'] != '' %}
+        <br>{{info['competences4']}}
+    {% endif %}
+</p>
 
 <h2 class="reveal-invisible-2">Date du projet :</h2>
 

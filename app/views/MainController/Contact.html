@@ -7,15 +7,15 @@
                 <p>Louka Fauvel</p>
                 <p>Localisation</p>
                 <p>14000 Caen, France</p>
-                <a href="https://www.facebook.com/louka.fauvel?fref=mentions" target="_blank"><i class="icon-contact facebook square icon"></i></a>
-                <a href="https://www.linkedin.com/in/louka-fauvel-268411209/" target="_blank"><i class="icon-contact linkedin alternate icon"></i></a>
-                <a href="https://github.com/Louka-Fauvel" target="_blank"><i class="icon-contact github icon"></i></a>
+                <a href="https://www.facebook.com/louka.fauvel?fref=mentions" class="ui circular facebook icon button" target="_blank"><i class="icon-contact facebook icon"></i></a>
+                <a href="https://www.linkedin.com/in/louka-fauvel-268411209/" class="ui circular linkedin icon button" target="_blank"><i class="icon-contact linkedin alternate icon"></i></a>
+                <a href="https://github.com/Louka-Fauvel" class="ui circular icon button" target="_blank"><i class="icon-contact github link black icon"></i></a>
             </div>
 
         </div>
 
         <div class="ui segment column reveal-invisible-3">
-            <form class="ui form" action="{{path('main.contactvalide')}}" method="post">
+            <form class="ui form" action="" method="post">
 
                 <div class="field reveal-invisible-5">
                     <label>Nom Prénom</label>
@@ -31,6 +31,13 @@
                     <label>Message</label>
                     <textarea name="message" placeholder="Votre message" required></textarea>
                 </div>
+
+                <div class="reveal-invisible-8">
+                    <button id="contact-envoyez" class="ui button">
+                        <div id="recaptcha-Reponse" class="g-recaptcha" data-sitekey="6LekCeEZAAAAAGKY6QsC1ume5HZ3VB8HmFdBsyMX"></div>
+                    </button>
+                </div>
+
                 <div class="reveal-invisible-8">
                     <input class="ui green button" type="submit" value="Envoyez">
                 </div>

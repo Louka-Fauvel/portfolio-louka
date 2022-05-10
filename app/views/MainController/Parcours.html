@@ -1,5 +1,5 @@
 <h1 class="reveal-invisible-1">Parcours</h1>
-<h2 class="reveal-invisible-2">Expériences</h2>
+<h2 id="experiences" class="reveal-invisible-2">Expériences</h2>
 
 <div class="ui equal width left aligned padded grid">
     {% for experience in experiences %}
@@ -21,6 +21,18 @@
                     <b>{{experience['titrelangage']}}</b> {{experience['infolangage']}}<br>
                     <b>{{experience['titreoutil']}}</b> {{experience['infooutil']}}
                 </p>
+                {% if experience['competences'] != '' %}
+                <p><b>Compétences abordées :</b>
+                    <br>- {{experience['competences']}}
+                    {% if experience['competences2'] != '' %}
+                        <br>- {{experience['competences2']}}
+                    {% endif %}
+                    {% if experience['competences3'] != '' %}
+                        <br>- {{experience['competences3']}}
+                    {% endif %}
+                </p>
+                <a href="assets/doc/{{experience['compte-rendu']}}" class="ui basic button" target="_blank">Compte-rendu</a>
+                {% endif %}
             </div>
         </div>
     {% if experience['id'] % 2!=0 or experience['fin'] == true %}
@@ -29,7 +41,7 @@
     {% endfor %}
 </div>
 
-<h2 class="reveal-invisible-2">Formations</h2>
+<h2 id="formations" class="reveal-invisible-2">Formations</h2>
 
 <div class="ui equal width left aligned padded grid">
     {% for formation in formations %}
@@ -58,14 +70,14 @@
     {% endfor %}
 </div>
 
-<h2 class="reveal-invisible-2">Certifications</h2>
+<h2 id="certifications" class="reveal-invisible-2">Certifications</h2>
 
 <div class="ui equal width left aligned padded grid">
     <div class="row reveal-invisible-3">
     {% for certification in certifications %}
 
         <div class="ui segment column">
-            <img class="ui large rounded image" src="assets/img/{{certification['img']}}" onclick="modalRGPD('.ui.basic.modal.certif{{certification.id}}')">
+            <img class="ui large rounded image image-cursor" src="assets/img/{{certification['img']}}" onclick="modalRGPD('.ui.basic.modal.certif{{certification.id}}')">
         </div>
 
         <div class="ui basic modal certif{{certification['id']}}">
@@ -76,12 +88,13 @@
     </div>
 </div>
 
-<h2 class="reveal-invisible-2">Tableau de synthèse</h2>
-<div class="reveal-invisible-3">
-    <a class="large ui inverted primary button reveal-invisible-3" href="assets/img/pexels-sergey-katyshkin-grand.jpg" target="_blank">Cliquer ici</a>
-</div>
+<h2 id="veille" class="reveal-invisible-2">Veille technologique</h2>
 
-<h2 class="reveal-invisible-2">Veille technologique</h2>
+<p>La veille technologique est l'observation et l'analyse de
+    l'environnement scientifique, technique et technologique (...)
+    pour en déduire les menaces et les opportunités de
+    développement. <i>Jakobiak, 1992</i></p>
+<p><b>Compétence abordée :</b> Organiser son développement professionnel (mettre en oeuvre des outils et stratégies de veille informationnelle)</p>
 
 <div class="ui equal width left aligned padded grid">
     {% for veille in veilles %}
@@ -91,9 +104,13 @@
 
         <div class="ui segment column">
             <div class="reveal-invisible-4">
-                <img class="ui small rounded image" src="assets/img/{{veille['img']}}">
+                <a href="{{veille['lien']}}" target="_blank">
+                    <img class="ui {{veille['tailleimg']}} rounded image" src="assets/img/{{veille['img']}}">
+                </a>
                 <h3>{{veille['titre']}}</h3>
+                {% if veille['date'] != '' %}
                 <div class="ui compact segment"><b>{{veille['date']}}</b></div>
+                {% endif %}
             </div>
             <div class="reveal-invisible-5">
                 <p>{{veille['lieu']}}</p>
@@ -105,3 +122,4 @@
     {% endif %}
     {% endfor %}
 </div>
+<iframe width="560" height="315" class="ui rounded image reveal-invisible-6" src="https://www.youtube.com/embed/videoseries?list=PLL8qYgBw4YlFCTGkT3_KyYdviowtAvHdD" title="PodCast AXOPEN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

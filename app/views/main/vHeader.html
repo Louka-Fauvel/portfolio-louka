@@ -11,6 +11,7 @@
 	{{ css('https://cdn.jsdelivr.net/npm/fomantic-ui@2.8.8/dist/semantic.min.css',{nonce: nonce}) }}
 	{{css('css/style.css', {nonce: nonce})}}
 {% endblock %}
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 {% if pageinfo == '/index.php' %}
 <body class="background-page-accueil" onload="rainActive()">
@@ -21,12 +22,42 @@
 	<div class="main-container">
 		<header>
 			<div class="ui container">
-				<div class="ui buttons">
-					<a href="/" class="ui inverted violet basic button">Accueil</a>
-					<a href="{{path('main.a_propos')}}" class="ui inverted violet basic button">A propos</a>
-					<a href="{{path('main.parcours')}}" class="ui inverted violet basic button">Parcours</a>
-					<a href="{{path('main.projets')}}" class="ui inverted violet basic button">Projets</a>
-					<a href="{{path('main.contact')}}" class="ui inverted violet basic button">Contact</a>
+				<div class="ui inverted buttons menu">
+					<a href="/" class="item">Accueil</a>
+					<a href="{{path('main.a_propos')}}" class="item">A propos</a>
+
+					<div class="ui simple inverted dropdown item">
+						<a href="{{path('main.parcours')}}">Parcours</a>
+						<i class="dropdown icon"></i>
+
+						<div class="ui menu">
+							<a href="{{path('main.parcours')}}#experiences" class="item">Expériences</a>
+							<a href="{{path('main.parcours')}}#formations" class="item">Formations</a>
+							<a href="{{path('main.parcours')}}#certifications" class="item">Certifications</a>
+							<a href="{{path('main.parcours')}}#veille" class="item">Veille technologique</a>
+						</div>
+					</div>
+
+					<div class="ui simple inverted dropdown item">
+						<a href="{{path('main.projets')}}">Projets</a>
+						<i class="dropdown icon"></i>
+
+						<div class="ui menu">
+							<div class="header">PROJETS SLAM</div>
+							<div class="divider"></div>
+							<a href="{{path('main.projets')}}#Annee1slamprojet" class="item">1ère année BTS SIO</a>
+							<a href="{{path('main.projets')}}#Annee2slamprojet" class="item">2ème année BTS SIO</a>
+							<div class="divider"></div>
+							<div class="header">COMPTES-RENDUS TP SUPPORT INFORMATIQUE</div>
+							<div class="divider"></div>
+							<a href="{{path('main.projets')}}#Annee1bloc1projet" class="item">1ère année BTS SIO</a>
+							<a href="{{path('main.projets')}}#Annee2bloc1projet" class="item">2ème année BTS SIO</a>
+						</div>
+					</div>
+					<div class="right menu">
+						<a href="assets/doc/tableau_de_synthese.pdf" class="item" target="_blank">Tableau de synthèse</a>
+						<a href="{{path('main.contact')}}" class="item">Contact</a>
+					</div>
 				</div>
 			</div>
 		</header>
