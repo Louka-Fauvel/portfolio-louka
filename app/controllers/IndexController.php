@@ -1,6 +1,7 @@
 <?php
 namespace controllers;
 
+use Ubiquity\attributes\items\router\Route;
 use Ubiquity\core\postinstall\Display;
 use Ubiquity\log\Logger;
 use Ubiquity\themes\ThemesManager;
@@ -33,4 +34,9 @@ class IndexController extends ControllerBase {
 			$this->forward(IndexController::class);
 		}
 	}
+
+    #[Route('{url}', requirements: ["url"=>"(?!(a|A)dmin).*?"], priority: -1000)]
+    public function p404($url){
+        $this->loadView('MainController/index.html', ['pageindex'=>true]);
+    }
 }
