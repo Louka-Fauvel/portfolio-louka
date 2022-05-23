@@ -15,7 +15,7 @@ abstract class ControllerBase extends Controller {
 
 	public function initialize() {
 		if (! URequest::isAjax()) {
-            $pageinfo = $_SERVER['PHP_SELF'];
+            $pageinfo = $_SERVER['REQUEST_URI'];
 			$this->loadView($this->headerView, ['pageinfo'=>$pageinfo]);
 		}
 	}

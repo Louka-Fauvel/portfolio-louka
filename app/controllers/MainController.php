@@ -77,7 +77,8 @@ class MainController extends \controllers\ControllerBase{
             ["id"=>0, "img"=>"certif_secnumacademie.png"],
             ["id"=>1, "img"=>"certif_html_css.png"],
             ["id"=>2, "img"=>"certif_javascript.png"],
-            ["id"=>3, "img"=>"certif_app_android.png", "fin"=>true],
+            ["id"=>3, "img"=>"certif_app_android.png"],
+            ["id"=>4, "img"=>"certif_sql.png", "fin"=>true],
         ];
 
         $veilles = [
@@ -94,7 +95,9 @@ class MainController extends \controllers\ControllerBase{
             ["id"=>5, "img"=>"flutter-logo.png", "tailleimg"=>"tiny", "lien"=>"https://flutter.dev/", "titre"=>"Flutter", "date"=>"",
                 "lieu"=>"", "info"=>"Alerte Google pour se maintenir informé."],
             ["id"=>6, "img"=>"cropped-logo.png", "tailleimg"=>"tiny", "lien"=>"https://www.pierre-giraud.com/", "titre"=>"Pierre-Giraud", "date"=>"",
-                "lieu"=>"", "info"=>"Toutes vos ressources sur le développement web. Apprenez à coder en HTML, CSS, JavaScript, Python, PHP…", "fin"=>true],
+                "lieu"=>"", "info"=>"Toutes vos ressources sur le développement web. Apprenez à coder en HTML, CSS, JavaScript, Python, PHP…"],
+            ["id"=>7, "img"=>"E_mds.jpg", "tailleimg"=>"tiny", "lien"=>"https://www.youtube.com/channel/UCbHpuqhSjm3eYbqJQTlvJvg", "titre"=>"E mds", "date"=>"",
+                "lieu"=>"", "info"=>"APPRENDRE À PROGRAMMER de débutant au niveau BTS SIO", "fin"=>true],
         ];
 
 		$this->loadView('MainController/Parcours.html', ['experiences'=>$experiences, 'formations'=>$formations, 'certifications'=>$certifications, 'veilles'=>$veilles]);
