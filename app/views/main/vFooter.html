@@ -5,8 +5,11 @@
     {% else %}
     <footer>
         <div class="ui container">
-            <button class="ui inverted violet basic button" onclick="modalRGPD('.ui.modal.rgpd')">RGPD</button>
-            <button class="ui inverted violet basic button" onclick="modalRGPD('.ui.modal.ml')">Mentions légales</button>
+
+            <div class="ui inverted fluid two item menu">
+                <a class="item" onclick="modalRGPD('.ui.modal.rgpd')">RGPD</a>
+                <a class="item" onclick="modalRGPD('.ui.modal.ml')">Mentions légales</a>
+            </div>
 
             <div class="ui modal rgpd">
                 <div class="header">RGPD</div>
@@ -42,9 +45,9 @@
                 <div class="content">
                     <p><b>Réalisation :</b> Louka Fauvel</p>
                     <p>En 2022</p>
-                    <p><b>Hébergeur :</b> (...)</p>
+                    <p><b>Hébergeur :</b> <a href="https://www.ovhcloud.com/fr/" target="_blank">OVHcloud</a></p>
                     <p><b>Crédit photo portrait :</b> Fabienne Guérif</p>
-                    <p><b>Crédit image accueil (libre d'utilisation) :</b> Sergey Katyshkin</p>
+                    <p><b>Crédit image de fond (libre d'utilisation) :</b> Sergey Katyshkin</p>
                 </div>
             </div>
 

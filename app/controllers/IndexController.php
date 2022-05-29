@@ -35,8 +35,8 @@ class IndexController extends ControllerBase {
 		}
 	}
 
-    #[Route('{url}', priority: -1000)]
+    #[Route('{url}', priority: -1000)] //requirements: ["url"=>"(?!(a|A)dmin).*?"],
     public function p404($url){
-        $this->loadView('MainController/index.html', ['pageindex'=>true]);
+        header('Location: /');
     }
 }

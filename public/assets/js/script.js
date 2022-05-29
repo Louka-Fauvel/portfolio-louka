@@ -28,19 +28,6 @@ function rainActive() {
     }
 }
 
-function boutonActive() {
-    const b = document.getElementById("contact-envoyez");
-    const recap = document.getElementById("recaptcha-verify-button");
-
-    if (recap == null) {
-        alert("test vide");
-    } else {
-        alert("test non vide");
-    }
-
-    b.classList.add("bouton-active");
-}
-
 function apparitionText() {
 
     const ratio = .1;
@@ -69,6 +56,14 @@ function apparitionText() {
     })
 
 }
+
+$('.message .close')
+    .on('click', function() {
+        $(this)
+            .closest('.message')
+            .transition('fade')
+        ;
+    })
+;
+
 apparitionText();
-x = document.getElementById("recaptcha-anchor-label");
-x.onclick = boutonActive;

@@ -1,11 +1,24 @@
 <?php
 return array(
-	"host"=>"127.0.0.1",
-	"port"=>587,
+	"host"=>"smtp.gmail.com",
+	"port"=>25,
 	"auth"=>false,
-	"user"=>"louka.fauvel@sts-sio-caen.info",
-	"password"=>"AscvhU159",
+	"user"=>"***",
+	"password"=>"*****",
 	"protocol"=>"smtp",
 	"CharSet"=>"utf-8",
-	"ns"=>"mail"
+	"ns"=>"mail",
+	"from"=>[
+			"address"=>"*****",
+			"name"=>"me"
+			],
+	"SMTPOptions"=>[
+			"ssl"=>[
+					"verify_peer"=>true,
+					"verify_depth"=>3,
+					"allow_self_signed"=>true,
+					"peer_name"=>"smtp.example.com",
+					"cafile"=>"/etc/ssl/ca_cert.pem"
+					]
+			]
 	);

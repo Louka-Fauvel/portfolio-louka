@@ -1,5 +1,5 @@
 body{
-	background: #e6e1c5;
+	background: #091a30;
 }
 .head, header{
 	background-color: #333333;
@@ -68,7 +68,18 @@ main .ui.container{
 	background-image: url("/assets/img/pexels-sergey-katyshkin-grand.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
+	background-attachment: fixed;
+}
+
+.overflow-accueil {
 	overflow: hidden;
+}
+
+.fond-transparent {
+	background-image: url("/assets/img/fond-transparent.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
 }
 
 .page-accueil-titre {
@@ -98,6 +109,14 @@ main .ui.container{
 	}
 }
 
+.text-center {
+	text-align: center;
+}
+
+.text-white {
+	color: white;
+}
+
 .image-cursor {
 	cursor: pointer;
 }
@@ -106,14 +125,15 @@ main .ui.container{
 	font-size: 3em;
 }
 
-.bouton-active {
-	opacity: 1 !important;
-	pointer-events: visible !important;
+.message-floating {
+	position: absolute!important;
+	top: 10vh;
+	left: 1vh;
+	z-index: 1;
 }
 
-.bouton-disable {
-	opacity: .45;
-	pointer-events: none;
+.color-etoile {
+	color: red;
 }
 
 [class*="reveal-invisible-"] {

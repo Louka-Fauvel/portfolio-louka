@@ -1,3 +1,9 @@
+<div class="ui {{color}} floating {{visible}} message message-floating">
+    <i class="close icon"></i>
+    <div class="header">
+        {{reponseMessage}}
+    </div>
+</div>
 <div class="ui equal width left aligned padded grid">
     <div class="row">
 
@@ -18,24 +24,22 @@
             <form class="ui form" action="" method="post">
 
                 <div class="field reveal-invisible-5">
-                    <label>Nom Prénom</label>
+                    <label>Nom Prénom <span class="color-etoile">*</span></label>
                     <input type="text" name="name" placeholder="Votre nom et prénom" required>
                 </div>
 
                 <div class="field reveal-invisible-6">
-                    <label>Email</label>
+                    <label>Email <span class="color-etoile">*</span></label>
                     <input type="text" name="email" placeholder="Votre email" required>
                 </div>
 
                 <div class="field reveal-invisible-7">
-                    <label>Message</label>
+                    <label>Message <span class="color-etoile">*</span></label>
                     <textarea name="message" placeholder="Votre message" required></textarea>
                 </div>
 
-                <div class="reveal-invisible-8">
-                    <button id="contact-envoyez" class="ui button">
-                        <div id="recaptcha-Reponse" class="g-recaptcha" data-sitekey="6LekCeEZAAAAAGKY6QsC1ume5HZ3VB8HmFdBsyMX"></div>
-                    </button>
+                <div class="field reveal-invisible-8">
+                    <div id="recaptcha-Reponse" class="g-recaptcha" data-sitekey="6LekCeEZAAAAAGKY6QsC1ume5HZ3VB8HmFdBsyMX"></div>
                 </div>
 
                 <div class="reveal-invisible-8">

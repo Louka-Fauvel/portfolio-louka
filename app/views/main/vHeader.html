@@ -4,7 +4,7 @@
 {% block header %}
 	<base href="{{config["siteUrl"]}}">
 	<meta charset="UTF-8">
-	<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+	<link rel="icon" href="assets/img/favicon.png" type="image/png">
 	<title>portfolio-louka-fauvel</title>
 {% endblock %}
 {% block css %}
@@ -14,9 +14,9 @@
 	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 {% if pageinfo == '/' %}
-<body class="background-page-accueil" onload="rainActive()">
+<body class="background-page-accueil overflow-accueil" onload="rainActive()">
 {% else %}
-<body>
+<body class="background-page-accueil">
 {% endif %}
 {% block head %}
 	<div class="main-container">
@@ -62,5 +62,9 @@
 			</div>
 		</header>
 		<main>
+			{% if pageinfo == '/' or pageinfo == '/contact/' %}
 			<div class="ui container">
+			{% else %}
+			<div class="ui container fond-transparent">
+			{% endif %}
 {% endblock %}

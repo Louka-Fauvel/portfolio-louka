@@ -1,56 +1,62 @@
-<h2 class="reveal-invisible-1">{{info['titre']}} {{info['titreinfo']}}</h2>
-<h2 class="reveal-invisible-2">Screenshot :</h2>
-<img class="ui {{info['tailleimg']}} rounded image reveal-invisible-3" src="/assets/img/{{info['img']}}">
+<div class="text-white">
+    <h2 class="reveal-invisible-1">{{info['titre']}} {{info['titreinfo']}}</h2>
+    <h2 class="reveal-invisible-2">Screenshot :</h2>
+    <img class="ui {{info['tailleimg']}} rounded image reveal-invisible-3" src="/assets/img/{{info['img']}}">
 
-{% if info['video'] != '' %}
-<h2 class="reveal-invisible-2">Vidéo :</h2>
-<iframe width="560" height="315" class="ui rounded image reveal-invisible-3" src="{{info['video']}}" title="WebPOO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-{% endif %}
-
-<h2 class="reveal-invisible-2">Objectif :</h2>
-
-<p class="reveal-invisible-3">{{info['objectif']}}</p>
-
-{% if info['lienconsigne'] != '' %}
-<h2 class="reveal-invisible-2">Lien des consignes : <a href="{{info['lienconsigne']}}" target="_blank">ici</a></h2>
-{% endif %}
-
-{% if info['liengithub'] != '' %}
-<h2 class="reveal-invisible-2">Lien du Github : <a href="{{info['liengithub']}}" target="_blank">ici</a></h2>
-{% elseif info['liencontenu'] != '' %}
-<h2 class="reveal-invisible-2">Lien du contenu du projet : <a href="{{info['liencontenu']}}" target="_blank">ici</a></h2>
-{% endif %}
-
-{% if info['themes'] or info['pluggins'] %}
-<h2 class="reveal-invisible-2">Thèmes utilisés :</h2>
-<p class="reveal-invisible-3">{{info['themes']}}</p>
-
-<h2 class="reveal-invisible-2">Pluggins utilisés :</h2>
-<p class="reveal-invisible-3">{{info['pluggins']}}</p>
-{% elseif info['langages'] %}
-<h2 class="reveal-invisible-2">Langages utilisés :</h2>
-<p class="reveal-invisible-3">{{info['langages']}}</p>
-{% endif %}
-
-<h2 class="reveal-invisible-2">Outils utilisés :</h2>
-
-<p class="reveal-invisible-3">{{info['outils']}}</p>
-
-<h2 class="reveal-invisible-2">Compétences abordées :</h2>
-
-<p class="reveal-invisible-3">
-    {{info['competences']}}
-    {% if info['competences2'] != '' %}
-        <br>{{info['competences2']}}
+    {% if info['video'] != '' %}
+    <h2 class="reveal-invisible-2">Vidéo :</h2>
+    <iframe width="560" height="315" class="ui rounded image reveal-invisible-3" src="{{info['video']}}" title="WebPOO" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     {% endif %}
-    {% if info['competences3'] != '' %}
-        <br>{{info['competences3']}}
-    {% endif %}
-    {% if info['competences4'] != '' %}
-        <br>{{info['competences4']}}
-    {% endif %}
-</p>
 
-<h2 class="reveal-invisible-2">Date du projet :</h2>
+    <h2 class="reveal-invisible-2">Objectif :</h2>
 
-<p class="reveal-invisible-3">{{info['date']}}</p>
+    <p class="reveal-invisible-3">{{info['objectif']}}</p>
+
+    {% if info['lienconsigne'] != '' %}
+    <h2 class="reveal-invisible-2">Lien des consignes : <a href="{{info['lienconsigne']}}" target="_blank">ici</a></h2>
+    {% endif %}
+
+    {% if info['liengithub'] != '' %}
+    <h2 class="reveal-invisible-2">Lien du Github : <a href="{{info['liengithub']}}" target="_blank">ici</a></h2>
+    {% endif %}
+    {% if info['liencontenu'] != '' %}
+    <h2 class="reveal-invisible-2">Lien du contenu du projet : <a href="{{info['liencontenu']}}" target="_blank">ici</a></h2>
+    {% endif %}
+
+    {% if info['themes'] or info['pluggins'] %}
+    <h2 class="reveal-invisible-2">Thèmes utilisés :</h2>
+    <p class="reveal-invisible-3">{{info['themes']}}</p>
+
+    <h2 class="reveal-invisible-2">Pluggins utilisés :</h2>
+    <p class="reveal-invisible-3">{{info['pluggins']}}</p>
+    {% elseif info['langages'] %}
+    <h2 class="reveal-invisible-2">Langages utilisés :</h2>
+    <p class="reveal-invisible-3">{{info['langages']}}</p>
+    {% endif %}
+
+    <h2 class="reveal-invisible-2">Outils utilisés :</h2>
+
+    <p class="reveal-invisible-3">{{info['outils']}}</p>
+
+    <h2 class="reveal-invisible-2">Compétences abordées :</h2>
+
+    <p class="reveal-invisible-3">
+        &#8226; {{info['competences']}}
+        {% if info['competences2'] != '' %}
+            <br>&#8226; {{info['competences2']}}
+        {% endif %}
+        {% if info['competences3'] != '' %}
+            <br>&#8226; {{info['competences3']}}
+        {% endif %}
+        {% if info['competences4'] != '' %}
+            <br>&#8226; {{info['competences4']}}
+        {% endif %}
+        {% if info['competences5'] != '' %}
+            <br>&#8226; {{info['competences5']}}
+        {% endif %}
+    </p>
+
+    <h2 class="reveal-invisible-2">Date du projet :</h2>
+
+    <p class="reveal-invisible-3">{{info['date']}}</p>
+</div>

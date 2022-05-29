@@ -1,7 +1,12 @@
 <?php
 namespace controllers;
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 use Ubiquity\attributes\items\router\Post;
  use Ubiquity\attributes\items\router\Route;
+
+//require 'app/mail/testmail.php';
 
  /**
   * Controller MainController
@@ -28,9 +33,11 @@ class MainController extends \controllers\ControllerBase{
                 "semaines"=>"7 semaines", "lieu"=>"Caen, Normandie",
                 "info"=>"Découverte et utilisation du Wlangage avec le logiciel WEBDEV 25 et WEBDEV 27 à travers différents projets de l'entreprise.",
                 "titrelangage"=>"Langage informatique utilisé :", "infolangage"=>"Wlangage",
-                "competences"=>"Répondre aux incidents et aux demandes d'assistance et d'évolution (traiter des demandes concernant les applications)",
-                "competences2"=>"Travailler en mode projet (analyser les objectifs et les modalités de l'organisation d'un projet, planifier les activités, évaluer les indicateurs de suivi d'un projet et analyser les écarts)",
-                "competences3"=>"Organiser son développement professionnel (mettre en place son environnement d'apprentissage personnel)",
+                "competences"=>"Gérer le patrimoine informatique (Exploiter des référentiels, normes et standards adoptés par le prestataire informatique, mettre en place et vérifier les niveaux d'habilitation associés à un service)",
+                "competences2"=>"Répondre aux incidents et aux demandes d'assistance et d'évolution (traiter des demandes concernant les applications)",
+                "competences3"=>"Développer la présence en ligne de l'organisation (participer à l'évolution d'un site web exploitant les données de l'organisation)",
+                "competences4"=>"Travailler en mode projet (analyser les objectifs et les modalités de l'organisation d'un projet, planifier les activités, évaluer les indicateurs de suivi d'un projet et analyser les écarts)",
+                "competences5"=>"Organiser son développement professionnel (mettre en place son environnement d'apprentissage personnel)",
                 "compte-rendu"=>"Stage_ALTILOG.pdf"],
 
             ["id"=>1, "img"=>"KNPLabs.jpg", "titre"=>"KNPLabs : Agence de développement", "date"=>"Mai - Juin 2021",
@@ -74,11 +81,13 @@ class MainController extends \controllers\ControllerBase{
         ];
 
         $certifications = [
-            ["id"=>0, "img"=>"certif_secnumacademie.png"],
-            ["id"=>1, "img"=>"certif_html_css.png"],
-            ["id"=>2, "img"=>"certif_javascript.png"],
-            ["id"=>3, "img"=>"certif_app_android.png"],
-            ["id"=>4, "img"=>"certif_sql.png", "fin"=>true],
+            ["id"=>0, "img"=>"certif_secnumacademie.png", "tailleimg"=>"large", "taillemodal"=>"fluid"],
+            ["id"=>1, "img"=>"certif_toeic.png", "tailleimg"=>"small", "taillemodal"=>"centered big"],
+            ["id"=>2, "img"=>"certif_html_css.png", "tailleimg"=>"large", "taillemodal"=>"fluid"],
+            ["id"=>3, "img"=>"certif_javascript.png", "tailleimg"=>"large", "taillemodal"=>"fluid", "fin"=>true],
+            ["id"=>4, "img"=>"certif_app_android.png", "tailleimg"=>"large", "taillemodal"=>"fluid"],
+            ["id"=>5, "img"=>"certif_sql.png", "tailleimg"=>"large", "taillemodal"=>"fluid"],
+            ["id"=>6, "img"=>"certif_php_mysql.png", "tailleimg"=>"large", "taillemodal"=>"fluid", "fin"=>true],
         ];
 
         $veilles = [
@@ -109,17 +118,17 @@ class MainController extends \controllers\ControllerBase{
 	public function Projets(){
 
         $Annee1slamprojets = [
-            ["id"=>0, "titre"=>"siteperso2", "titreinfo"=>"(1ère version du portfolio)", "route"=>"siteperso2", "tailleimg"=>"large", "img"=>"siteperso2.png"],
+            ["id"=>0, "titre"=>"Siteperso", "titreinfo"=>"", "route"=>"siteperso", "tailleimg"=>"large", "img"=>"siteperso.png"],
             ["id"=>1, "titre"=>"Refonte-Site-Artiste", "titreinfo"=>"", "route"=>"refonte-site-artiste", "tailleimg"=>"large", "img"=>"Refonte-Site-Artiste.png"],
             ["id"=>2, "titre"=>"CRM", "titreinfo"=>"", "route"=>"crm", "tailleimg"=>"medium", "img"=>"agilecrm.png"],
             ["id"=>3, "titre"=>"WebPOO", "titreinfo"=>"", "route"=>"webpoo", "tailleimg"=>"large", "img"=>"WebPOO.png", "fin"=>true],
         ];
 
         $Annee2slamprojets = [
-            ["id"=>0, "titre"=>"Portfolio", "titreinfo"=>"(2ème version du portfolio)", "route"=>"portfolio", "tailleimg"=>"large", "img"=>"Portfolio_accueil.png"],
+            ["id"=>0, "titre"=>"Siteperso2", "titreinfo"=>"", "route"=>"siteperso2", "tailleimg"=>"large", "img"=>"siteperso2.png"],
             ["id"=>1, "titre"=>"SpAnimals", "titreinfo"=>"", "route"=>"spanimals", "tailleimg"=>"large", "img"=>"spanimals.png"],
-            ["id"=>2, "titre"=>"proxmox-admin", "titreinfo"=>"", "route"=>"proxmox-admin", "tailleimg"=>"large", "img"=>"proxmox-admin.jpg"],
-            ["id"=>3, "titre"=>"multi-timer", "titreinfo"=>"", "route"=>"multi-timer", "tailleimg"=>"small", "img"=>"multi-timer.jpg", "fin"=>true],
+            ["id"=>2, "titre"=>"Proxmox-admin", "titreinfo"=>"", "route"=>"proxmox-admin", "tailleimg"=>"large", "img"=>"proxmox-admin.jpg"],
+            ["id"=>3, "titre"=>"Multi-timer", "titreinfo"=>"", "route"=>"multi-timer", "tailleimg"=>"small", "img"=>"multi-timer.jpg", "fin"=>true],
         ];
 
         $Annee1bloc1projets = [
@@ -137,19 +146,82 @@ class MainController extends \controllers\ControllerBase{
 
 	}
 
+    function sendmail($name, $emailclient, $message) {
+        //Create an instance; passing `true` enables exceptions
+        $mail = new PHPMailer(true);
+
+        try {
+
+            $messageBody ="<a>$emailclient</a> <p>$name</p><br> <p>$message</p>";
+
+            //Server settings
+            $mail->SMTPDebug = SMTP::DEBUG_OFF;                      //Enable verbose debug output
+            $mail->isSMTP();                                            //Send using SMTP
+            $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+            $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+            $mail->Username   = '';                     //SMTP username
+            $mail->Password   = '';                               //SMTP password
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
+            $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
+            //Recipients
+            $mail->setFrom('');
+            $mail->addAddress('');     //Add a recipient
+            //$mail->addAddress('ellen@example.com');               //Name is optional
+            //$mail->addReplyTo('info@example.com', 'Information');
+            //$mail->addCC('cc@example.com');
+            //$mail->addBCC('bcc@example.com');
+
+            //Attachments
+            //$mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
+            //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+
+            //Content
+            $mail->isHTML(true);                                  //Set email format to HTML
+            $mail->Subject = 'Portfolio-Contact';
+            $mail->Body    = $messageBody;
+            //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+            $mail->send();
+            //echo 'Message has been sent';
+        } catch (Exception $e) {
+            //echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        }
+    }
 
 	#[Route(path: "/contact",name: "main.contact")]
 	public function Contact(){
-		//{{path('main.contactvalide')}}
-        //var_dump($_POST['g-recaptcha-response']);
-		$this->loadView('MainController/Contact.html');
 
-	}
+        if(isset($_POST['name']) && !empty($_POST['email']) && !empty($_POST['message'])) {
+            if(!empty($_POST['g-recaptcha-response'])) {
 
+                $name = $_POST['name'];
+                $emailclient = $_POST['email'];
+                $message = $_POST['message'];
+                $this->sendmail($name, $emailclient, $message);
+                $_POST=[];
+                $visible= "visible";
+                $reponseMessage= "Votre message a bien été envoyé.";
+                $color= "success";
 
-	#[Post(path: "/contactvalide",name: "main.contactvalide")]
-	public function ContactValide(){
-		
+            } else {
+
+                $_POST=[];
+                $visible= "visible";
+                $reponseMessage= "Vous devez remplir toutes les conditions.";
+                $color= "error";
+
+            }
+        } else {
+
+            $visible= "hidden";
+            $reponseMessage= "Vous devez remplir toutes les conditions.";
+            $color= "error";
+
+        }
+
+		$this->loadView('MainController/Contact.html', ['visible'=>$visible, 'reponseMessage'=>$reponseMessage, 'color'=>$color]);
+
 	}
 
 }
