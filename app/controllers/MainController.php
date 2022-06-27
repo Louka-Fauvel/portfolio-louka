@@ -87,7 +87,8 @@ class MainController extends \controllers\ControllerBase{
             ["id"=>3, "img"=>"certif_javascript.png", "tailleimg"=>"large", "taillemodal"=>"fluid", "fin"=>true],
             ["id"=>4, "img"=>"certif_app_android.png", "tailleimg"=>"large", "taillemodal"=>"fluid"],
             ["id"=>5, "img"=>"certif_sql.png", "tailleimg"=>"large", "taillemodal"=>"fluid"],
-            ["id"=>6, "img"=>"certif_php_mysql.png", "tailleimg"=>"large", "taillemodal"=>"fluid", "fin"=>true],
+            ["id"=>6, "img"=>"certif_php_mysql.png", "tailleimg"=>"large", "taillemodal"=>"fluid"],
+            ["id"=>7, "img"=>"certif_debut_react.png", "tailleimg"=>"large", "taillemodal"=>"fluid", "fin"=>true],
         ];
 
         $veilles = [
