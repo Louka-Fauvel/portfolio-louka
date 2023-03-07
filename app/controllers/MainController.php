@@ -29,7 +29,14 @@ class MainController extends \controllers\ControllerBase{
 	#[Route(path: "/parcours",name: "main.parcours")]
 	public function Parcours(){
 		$experiences = [
-            ["id"=>0, "img"=>"Altilog.webp", "titre"=>"Altilog : Agence de développement", "date"=>"Décembre - Février 2022",
+            ["id"=>0, "img"=>"", "titre"=>"Fime : ...", "date"=>"Décembre 2022 - Février 2023",
+                "semaines"=>"7 semaines", "lieu"=>"Caen, Normandie",
+                "info"=>"",
+                "titrelangage"=>"Langages informatiques utilisés :", "infolangage"=>"TypeScript, Python",
+                "competences"=>"",
+                "compte-rendu"=>""],
+
+            ["id"=>1, "img"=>"Altilog.webp", "titre"=>"Altilog : Agence de développement", "date"=>"Décembre 2021 - Février 2022",
                 "semaines"=>"7 semaines", "lieu"=>"Caen, Normandie",
                 "info"=>"Découverte et utilisation du Wlangage avec le logiciel WEBDEV 25 et WEBDEV 27 à travers différents projets de l'entreprise.",
                 "titrelangage"=>"Langage informatique utilisé :", "infolangage"=>"Wlangage",
@@ -40,7 +47,7 @@ class MainController extends \controllers\ControllerBase{
                 "competences5"=>"Organiser son développement professionnel (mettre en place son environnement d'apprentissage personnel)",
                 "compte-rendu"=>"Stage_ALTILOG.pdf"],
 
-            ["id"=>1, "img"=>"KNPLabs.jpg", "titre"=>"KNPLabs : Agence de développement", "date"=>"Mai - Juin 2021",
+            ["id"=>2, "img"=>"KNPLabs.jpg", "titre"=>"KNPLabs : Agence de développement", "date"=>"Mai - Juin 2021",
                 "semaines"=>"5 semaines", "lieu"=>"Caen, Normandie",
                 "info"=>"Approfondissement de mes connaissances sur Github, communication au sein d'une équipe avec des pull requests, 
                     utilisation des objets avec PHP et découverte du framework Symfony. Découverte du management d'une agence de développement.",
@@ -48,28 +55,28 @@ class MainController extends \controllers\ControllerBase{
                 "competences"=>"Organiser son développement professionnel (mettre en place son environnement d'apprentissage personnel)",
                 "compte-rendu"=>"Stage_KNPLabs.pdf"],
 
-            ["id"=>2, "img"=>"Erasmus.png", "titre"=>"ERASMUS + : Institut Lemonnier", "date"=>"Octobre 2019",
+            ["id"=>3, "img"=>"Erasmus.png", "titre"=>"ERASMUS + : Institut Lemonnier", "date"=>"Octobre 2019",
                 "semaines"=>"1 semaine", "lieu"=>"Falkenberg, Suède",
                 "info"=>"Conception et construction d'un véhicule à énergie innovante. Travail en pluridisciplinarité entre mécanique et mathématiques. 
                     Voyage jusqu’en Suède pour rejoindre les autres élèves en mobilité professionnelle. 
                     Contribution à un « congrès de spécialistes » sur ce sujet pour la première fois.",
                 "titrelangage"=>"Langue de travail :", "infolangage"=>"Anglais"],
 
-            ["id"=>3, "img"=>"Erasmus.png", "titre"=>"ERASMUS + : Institut Lemonnier", "date"=>"Mars 2019",
+            ["id"=>4, "img"=>"Erasmus.png", "titre"=>"ERASMUS + : Institut Lemonnier", "date"=>"Mars 2019",
                 "semaines"=>"1 semaine", "lieu"=>"Caen, Normandie",
                     "info"=>"Conception et construction d'un véhicule à énergie innovante. Travail en pluridisciplinarité entre mécanique et mathématiques. 
                         Accueil des élèves venant d'Espagne et de Suède. Compte-rendu du projet en réalisant un film.",
                 "titrelangage"=>"Langue de travail :", "infolangage"=>"Anglais",
                 "titreoutil"=>"Outil :", "infooutil"=>"Adobe Premiere"],
 
-            ["id"=>4, "img"=>"Corlet.png", "titre"=>"Corlet : Agence de communication", "date"=>"Janvier 2017",
+            ["id"=>5, "img"=>"Corlet.png", "titre"=>"Corlet : Agence de communication", "date"=>"Janvier 2017",
                 "semaines"=>"1 semaine", "lieu"=>"Caen, Normandie",
                 "info"=>"Observation du travail d'un graphiste. Utilisation des outils du graphiste pour créer des images.",
                 "titreoutil"=>"Outil :", "infooutil"=>"Adobe Photoshop", "fin"=>true],
         ];
 
         $formations = [
-            ["id"=>0, "img"=>"SupAvenir.png", "titre"=>"BTS SIO - CaenSup Sainte-Ursule", "date"=>"2020 - 2022",
+            ["id"=>0, "img"=>"SupAvenir.png", "titre"=>"BTS SIO - CaenSup Sainte-Ursule", "date"=>"2020 - 2023",
                 "lieu"=>"Caen, Normandie", "info"=>"",
                 "langageoutil"=>"Langages et outils :", "infolangue"=>"HTML/CSS, PHP, Framework (Bootstrap, Ubiquity), Python, SQL, Javascript, JAVA, Flutter Dart",
                 "titreconcept"=>"Concepts :", "infoconcepts"=>"Algorithmique, POO, méthode Merise"],
