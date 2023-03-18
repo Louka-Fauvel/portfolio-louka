@@ -29,12 +29,16 @@ class MainController extends \controllers\ControllerBase{
 	#[Route(path: "/parcours",name: "main.parcours")]
 	public function Parcours(){
 		$experiences = [
-            ["id"=>0, "img"=>"", "titre"=>"Fime : ...", "date"=>"Décembre 2022 - Février 2023",
+            ["id"=>0, "img"=>"Fime_logo.png", "titre"=>"Fime : Agence spécialisée dans la sécurisation des moyens de paiements",
+                "date"=>"Décembre 2022 - Février 2023",
                 "semaines"=>"7 semaines", "lieu"=>"Caen, Normandie",
-                "info"=>"",
-                "titrelangage"=>"Langages informatiques utilisés :", "infolangage"=>"TypeScript, Python",
-                "competences"=>"",
-                "compte-rendu"=>""],
+                "info"=>"Collaboration à plusieurs projets avec Angular et Python. Réalisation de tests d'intégration avec Pipeline.",
+                "titrelangage"=>"Langages informatiques utilisés :", "infolangage"=>"Angular, Python",
+                "competences"=>"Répondre aux incidents et aux demandes d'assistance et d'évolution (traiter des demandes concernant les applications)",
+                "competences2"=>"Travailler en mode projet (planifier les activités)",
+                "competences3"=>"Mettre à disposition des utilisateurs un service informatique (Réaliser les tests d'intégration et d'acceptation d'un service)",
+                "competences4"=>"Organiser son développement professionnel (mettre en place son environnement d'apprentissage personnel)",
+                "compte-rendu"=>"Stage_Fime.pdf"],
 
             ["id"=>1, "img"=>"Altilog.webp", "titre"=>"Altilog : Agence de développement", "date"=>"Décembre 2021 - Février 2022",
                 "semaines"=>"7 semaines", "lieu"=>"Caen, Normandie",
@@ -43,8 +47,7 @@ class MainController extends \controllers\ControllerBase{
                 "competences"=>"Gérer le patrimoine informatique (Exploiter des référentiels, normes et standards adoptés par le prestataire informatique, mettre en place et vérifier les niveaux d'habilitation associés à un service)",
                 "competences2"=>"Répondre aux incidents et aux demandes d'assistance et d'évolution (traiter des demandes concernant les applications)",
                 "competences3"=>"Développer la présence en ligne de l'organisation (participer à l'évolution d'un site web exploitant les données de l'organisation)",
-                "competences4"=>"Travailler en mode projet (analyser les objectifs et les modalités de l'organisation d'un projet, planifier les activités, évaluer les indicateurs de suivi d'un projet et analyser les écarts)",
-                "competences5"=>"Organiser son développement professionnel (mettre en place son environnement d'apprentissage personnel)",
+                "competences4"=>"Organiser son développement professionnel (mettre en place son environnement d'apprentissage personnel)",
                 "compte-rendu"=>"Stage_ALTILOG.pdf"],
 
             ["id"=>2, "img"=>"KNPLabs.jpg", "titre"=>"KNPLabs : Agence de développement", "date"=>"Mai - Juin 2021",
@@ -128,15 +131,18 @@ class MainController extends \controllers\ControllerBase{
         $Annee1slamprojets = [
             ["id"=>0, "titre"=>"Siteperso", "titreinfo"=>"", "route"=>"siteperso", "tailleimg"=>"large", "img"=>"siteperso.png"],
             ["id"=>1, "titre"=>"Refonte-Site-Artiste", "titreinfo"=>"", "route"=>"refonte-site-artiste", "tailleimg"=>"large", "img"=>"Refonte-Site-Artiste.png"],
-            ["id"=>2, "titre"=>"CRM", "titreinfo"=>"", "route"=>"crm", "tailleimg"=>"medium", "img"=>"agilecrm.png"],
-            ["id"=>3, "titre"=>"WebPOO", "titreinfo"=>"", "route"=>"webpoo", "tailleimg"=>"large", "img"=>"WebPOO.png", "fin"=>true],
+            ["id"=>2, "titre"=>"KeePass", "titreinfo"=>"", "route"=>"keepass", "tailleimg"=>"small", "img"=>"keepass_logo.png"],
+            ["id"=>3, "titre"=>"CRM", "titreinfo"=>"", "route"=>"crm", "tailleimg"=>"medium", "img"=>"agilecrm.png"],
+            ["id"=>4, "titre"=>"WebPOO", "titreinfo"=>"", "route"=>"webpoo", "tailleimg"=>"large", "img"=>"WebPOO.png", "fin"=>true],
         ];
 
         $Annee2slamprojets = [
             ["id"=>0, "titre"=>"Siteperso2", "titreinfo"=>"", "route"=>"siteperso2", "tailleimg"=>"large", "img"=>"siteperso2.png"],
             ["id"=>1, "titre"=>"SpAnimals", "titreinfo"=>"", "route"=>"spanimals", "tailleimg"=>"large", "img"=>"spanimals.png"],
             ["id"=>2, "titre"=>"Proxmox-admin", "titreinfo"=>"", "route"=>"proxmox-admin", "tailleimg"=>"large", "img"=>"proxmox-admin.jpg"],
-            ["id"=>3, "titre"=>"Multi-timer", "titreinfo"=>"", "route"=>"multi-timer", "tailleimg"=>"small", "img"=>"multi-timer.jpg", "fin"=>true],
+            ["id"=>3, "titre"=>"Multi-timer", "titreinfo"=>"", "route"=>"multi-timer", "tailleimg"=>"small", "img"=>"multi-timer.jpg"],
+            ["id"=>4, "titre"=>"E-music", "titreinfo"=>"", "route"=>"e-music", "tailleimg"=>"large", "img"=>"e-music.png"],
+            ["id"=>5, "titre"=>"Padlet", "titreinfo"=>"", "route"=>"padlet", "tailleimg"=>"small", "img"=>"", "fin"=>true],
         ];
 
         $Annee1bloc1projets = [
