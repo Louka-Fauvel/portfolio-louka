@@ -6,8 +6,9 @@ function modalRGPD(fmodal) {
 function rainActive() {
 
     const testFonction = document.getElementById('particule');
-
-    setInterval(rainFall, 30);
+    if (screen.width > 1000 && screen.height > 1000) {
+        setInterval(rainFall, 30);
+    }
 
     function rainFall() {
 
@@ -48,7 +49,7 @@ function apparitionText() {
             }
 
         })
-        console.log('handleIntersect');
+        //console.log('handleIntersect');
     }
     const observer = new IntersectionObserver(handleIntersect, options);
     document.querySelectorAll('[class*="reveal-invisible-"]').forEach(function (r) {
@@ -65,5 +66,4 @@ $('.message .close')
         ;
     })
 ;
-
 apparitionText();
