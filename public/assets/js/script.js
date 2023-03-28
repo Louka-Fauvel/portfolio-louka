@@ -3,6 +3,16 @@ function modalRGPD(fmodal) {
         .modal('show')
     ;
 }
+
+async function loaderAccueil() {
+
+    const loader = document.querySelector('.loader-accueil');
+    loader.classList.add('fondu-accueil');
+    setTimeout(apparitionText, 1000);
+    setTimeout(rainActive, 3000);
+
+}
+
 function rainActive() {
 
     const testFonction = document.getElementById('particule');
