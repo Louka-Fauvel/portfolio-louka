@@ -4,15 +4,6 @@ function modalRGPD(fmodal) {
     ;
 }
 
-async function loaderAccueil() {
-
-    const loader = document.querySelector('.loader-accueil');
-    loader.classList.add('fondu-accueil');
-    setTimeout(apparitionText, 1000);
-    setTimeout(rainActive, 3000);
-
-}
-
 function rainActive() {
 
     const testFonction = document.getElementById('particule');
@@ -76,4 +67,26 @@ $('.message .close')
         ;
     })
 ;
-apparitionText();
+if(window.location.origin.valueOf()+"/" !== window.location.href.valueOf()) {
+    apparitionText();
+} else {
+
+    const loader = document.querySelector('.loader-accueil');
+
+    window.addEventListener('load', () => {
+
+        setTimeout(function () {
+            loader.classList.add('circulaire-accueil');
+        }, 3000);
+        setTimeout(function () {
+            loader.classList.add('fondu-accueil');
+        }, 4000);
+        setTimeout(rainActive, 5000);
+        setTimeout(apparitionText, 5000);
+        setTimeout(function () {
+            loader.remove();
+        }, 7000);
+
+    });
+
+}

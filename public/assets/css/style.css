@@ -100,21 +100,53 @@ main .ui.container{
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100%;
+	background-color: #091a30;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.loader-accueil img {
+	position: absolute!important;
 	animation: rotation 2s infinite linear;
 }
 
 @keyframes rotation {
 	from {
-		transform: translate(-50%, -50%) rotate(0deg);
+		transform: rotate(0deg);
 	}
 	to {
-		transform: translate(-50%, -50%) rotate(359deg);
+		transform: rotate(359deg);
 	}
 }
 
 .fondu-accueil {
 	opacity: 0;
-	transition: opacity 5s ease-in-out;
+	transition: opacity 2s ease-out;
+}
+
+.circulaire-accueil {
+	animation: circulaire 3s ease-out;
+}
+
+@keyframes circulaire {
+	0% {
+		transform: translate(-50%, -50%) scale(1,1);
+	}
+	25% {
+		border-radius: 50%;
+		width: 500px;
+		height: 500px;
+		transform: translate(-50%, -50%);
+	}
+	100% {
+		border-radius: 50%;
+		width: 500px;
+		height: 500px;
+		transform: translate(-50%, -50%) scale(0,0);
+	}
 }
 
 .circle.icon {
