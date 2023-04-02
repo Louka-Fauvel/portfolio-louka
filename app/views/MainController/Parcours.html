@@ -120,202 +120,61 @@
                 <div class="ui compact segment"><b>{{veille['date']}}</b></div>
                 {% endif %}
             </div>
+            <br>
             <div class="reveal-invisible-5">
+                {% if veille['lieu'] != '' %}
                 <p>{{veille['lieu']}}</p>
-                <p><b>Objectif :</b> {{veille['info']}}</p>
+                {% endif %}
+
+                {% for info in veille['infos'] %}
+
+                    {% if info['p'] %}
+                    <p>
+                        {% for p in info['p'] %}
+                            {% if p['text'] %}
+                                {{p['text']}}
+                            {% endif %}
+                            {% if p['a'] %}
+                                <a href="{{p['a']['href']}}" target="_blank">{{p['a']['text']}}</a>
+                            {% endif %}
+                            {% if p['gras'] %}
+                                <b>{{p['gras']}}</b>
+                            {% endif %}
+                        {% endfor %}
+                    </p>
+                    {% endif %}
+
+                    {% if info['ul'] %}
+                    <ul>
+                        {% for ul in info['ul'] %}
+                            {% if ul['li'] %}
+                                <li>
+                                    {% for li in ul['li'] %}
+                                        {% if li['text'] %}
+                                            {{li['text']}}
+                                        {% endif %}
+                                        {% if li['a'] %}
+                                            <a href="{{li['a']['href']}}" target="_blank">{{li['a']['text']}}</a>
+                                        {% endif %}
+                                    {% endfor %}
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+
+                    {% if info['objectif'] %}
+                        <p><b>Objectif :</b> {{info['objectif']}}</p>
+                    {% endif %}
+
+                {% endfor %}
             </div>
         </div>
+
     {% if veille['id'] % 2!=0 or veille['fin'] == true %}
     </div>
     {% endif %}
     {% endfor %}
 </div>
+
 <iframe width="560" height="315" class="ui rounded image reveal-invisible-6" src="https://www.youtube.com/embed/videoseries?list=PLL8qYgBw4YlFCTGkT3_KyYdviowtAvHdD" title="PodCast AXOPEN" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<div class="ui equal width left aligned padded grid">
-    <div class="row reveal-invisible-3">
-
-        <div class="ui segment column">
-            <div class="reveal-invisible-4">
-                <a href="https://fomantic-ui.com/" target="_blank">
-                    <img class="ui tiny rounded image" src="assets/img/logo_fomantic.png">
-                </a>
-                <h3>Nouveautés chez Fomantic-UI 2.9.0</h3>
-                <div class="ui compact segment"><b>23 octobre 2022</b></div>
-            </div>
-            <div class="reveal-invisible-5">
-                <p>
-                    Fomantic-UI est un framework UI qui facilite la création de sites responsives et esthétiques.
-                    Voici les dernières évolutions sur Fomantic-UI.
-                    En effet, une toute nouvelle version vient de sortir le 9 octobre 2022. Je vais vous présenter les 5 points d’évolutions qui me paraissent les plus intéressants.
-                </p>
-                <ul>
-                    <li>
-                        <a href="https://fomantic-ui.com/modules/flyout.html">Flyout</a> : est un nouveau composant UI.
-                        Il est la fusion entre le composant du <a href="https://fomantic-ui.com/modules/modal.html">Modal</a> et du <a href="https://fomantic-ui.com/modules/sidebar.html">Sidebar</a>.
-                        Il permet de faire afficher un contenu à partir du bord de la page superposé à la page.
-                    </li>
-                    <li>
-                        <a href="https://fomantic-ui.com/elements/input.html">Input</a> : supporte enfin le <a href="https://fomantic-ui.com/elements/input.html#file-input">File input</a> qui permet d'ajouter un ou plusieurs fichiers dans le input.
-                    </li>
-                    <li>
-                        <a href="https://fomantic-ui.com/modules/calendar.html">Calendar</a> : est un champ input qui permet de sélectionner une date.
-                        Il peut désormais entièrement modifier le format de la date avec les <a href="https://fomantic-ui.com/modules/calendar.html#custom-format">tokens</a>.
-                    </li>
-                    <li>
-                        <a href="https://fomantic-ui.com/collections/table.html">Table</a> : est maintenant capable de
-                        <a href="https://fomantic-ui.com/collections/table.html#scrolling">défiler à la verticale et à l’horizontale</a> et elle peut aussi <a href="https://fomantic-ui.com/collections/table.html#stuck">bloquer</a> des colonnes qui ne sont pas soumises au défilement horizontal.
-                    </li>
-                </ul>
-                <p>Pour retrouver l’ensemble des nouvelles fonctionnalités cliquez <a href="https://fomantic-ui.com/introduction/new.html">ici</a>.</p>
-            </div>
-        </div>
-
-
-        <div class="ui segment column">
-            <div class="reveal-invisible-4">
-                <a href="https://www.use.design/category/insights-fr/" target="_blank">
-                    <img class="ui small rounded image" src="assets/img/logo_usedesign.png">
-                </a>
-                <h3>Innovations UI / design</h3>
-                <div class="ui compact segment"><b>30 octobre 2022</b></div>
-            </div>
-            <div class="reveal-invisible-5">
-                <p>
-                    <a href="https://www.use.design/lagence-de-design-digital-et-le-design-numerique/">L’agence de design digital et le design numérique</a>
-                </p>
-                <p><b>Le design digital : un métier à plusieurs facettes</b></p>
-                <ul>
-                    <li>
-                        Le design graphique qui ne touche qu’au graphisme d’un outil digital.
-                    </li>
-                    <li>
-                        Le UX design qui s’attache à rendre l’expérience utilisateur d’un site web, d’un logiciel en ligne ou d’une application mobile mémorable afin de transformer ses utilisateurs en clients fidèles.
-                    </li>
-                    <li>
-                        Le UI design qui a pour but de rendre l'esthétique d’un outil digital agréable, efficace et adaptée à tout support numérique.
-                    </li>
-                    <li>
-                        Le design thinking qui a pour objectif de tirer le maximum du potentiel créatif des collaborateurs en utilisant les différentes techniques du design.
-                    </li>
-                    <li>
-                        Le design sprint qui vise à repenser des produits et services ou en créer de nouveaux en concevant des prototypes en à peine 5 jours.
-                    </li>
-                </ul>
-                <p><b>Les outils du design numérique</b></p>
-                <ul>
-                    <li>
-                        Procreate : une application de graphisme digital pour iPad.
-                    </li>
-                    <li>
-                        Myfonts : un site internet proposant des polices de caractères téléchargeables sous format digital.
-                    </li>
-                    <li>
-                        Clip Studio paint : des applications logicielles de peinture numérique.
-                    </li>
-                    <li>
-                        Adobe Creative Cloud tools : applications et outils de design graphique et de retouche photo notamment.
-                    </li>
-                    <li>
-                        Adobe Photoshop : application de retouche photo et de design digital.
-                    </li>
-                    <li>
-                        Adobe Illustrator : logiciel de design graphique.
-                    </li>
-                    <li>
-                        Wacom tools : tablettes et outils de design graphique.
-                    </li>
-                </ul>
-                <p><b>Pas de design numérique efficace sans marketing digital…</b></p>
-                <ul>
-                    <li>
-                        Wishpond : est une plateforme qui permet de gérer les stratégie marketing sans avoir besoin d’un autre outil.
-                    </li>
-                    <li>
-                        Google Ads : est un outil de publicité en ligne qui facilite la recherche de services proposés par des vendeurs.
-                    </li>
-                    <li>
-                        Mail pro : aide à créer des mails professionnels pour les entreprises.
-                    </li>
-                    <li>
-                        Hootsuite : est un outil qui permet de gérer la vue en même temps sur tous les réseaux sociaux connectés à l’utilisateur.
-                    </li>
-                    <li>
-                        Google Analytics : permet de faire une évaluation de la performance d’un site.
-                    </li>
-                    <li>
-                        …
-                    </li>
-                </ul>
-                <p><b>Le design thinking</b></p>
-                <p>peut être traduit par "esprit design". C’est une méthode/concept d’innovation du travail pour tirer au maximum le potentiel créatif des collaborateurs tout en utilisant des outils du design comme :</p>
-                <ul>
-                    <li>
-                        La carte de l’empathie
-                    </li>
-                    <li>
-                        Le parcours utilisateur
-                    </li>
-                    <li>
-                        Les espoirs et les craintes
-                    </li>
-                    <li>
-                        Les vignettes d’idées
-                    </li>
-                    <li>
-                        Le scénario la grille de priorisation
-                    </li>
-                    <li>
-                        La déclaration des besoins
-                    </li>
-                    <li>
-                        Les hypothèses et questions
-                    </li>
-                    <li>
-                        La grille de retours
-                    </li>
-                    <li>
-                        Aujourd’hui, demain et après-demain
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-    </div>
-    <div class="row reveal-invisible-3">
-
-        <div class="ui segment column">
-            <div class="reveal-invisible-4">
-                <a href="https://www.use.design/category/insights-fr/" target="_blank">
-                    <img class="ui small rounded image" src="assets/img/logo_usedesign.png">
-                </a>
-                <h3>UX et UI design, les deux faces de l’interface utilisateur</h3>
-                <div class="ui compact segment"><b>19 novembre 2022</b></div>
-            </div>
-            <div class="reveal-invisible-5">
-                <p>
-                    <a href="https://www.use.design/ux-ui-avec-use-design-agence-designer-paris/">UX et UI design, les deux faces de l’interface utilisateur</a>
-                </p>
-                <br>
-                <p>Quelles sont les différences entre designer UX et designer UI ?</p>
-                <p>Ce sont deux disciplines complémentaires qui ont pour objectif de répondre aux attentes des utilisateurs.</p>
-                <p>UX : expérience utilisateur (user Experience Design)</p>
-                <p>UI : interface utilisateur</p>
-                <br>
-                <p>
-                    Le <b>UX designer</b> analyse les besoins, les retours des utilisateurs ainsi que la finalité du produit pour créer l’architecture de l’interface.
-                    Si c’est pour un site commercial, le designer UX doit mettre en place une stratégie pour inciter les utilisateurs à acheter les produits et à les fidéliser.
-                </p>
-                <br>
-                <p>
-                    Le <b>UI designer</b> se concentre sur l’aspect esthétique de l’application, du logiciel ou site web… Il veille à ce que le produit soit responsive, c'est-à-dire qu’il s’adapte au format mobile.
-                    Il est parfois en charge de la charte graphique de l’interface, du logo… Il doit rendre l'interface attractive.
-                </p>
-                <br>
-                <p>Lequel est le plus important ?</p>
-                <p>Les deux.</p>
-                <p>Certains concepteurs sont à la fois UX et UI designer.</p>
-            </div>
-        </div>
-
-    </div>
-</div>

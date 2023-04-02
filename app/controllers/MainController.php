@@ -102,22 +102,458 @@ class MainController extends \controllers\ControllerBase{
         ];
 
         $veilles = [
-            ["id"=>0, "img"=>"Hacktoberfest2021.png", "tailleimg"=>"small", "lien"=>"https://hacktoberfest.digitalocean.com/", "titre"=>"Hacktoberfest 2021", "date"=>"Octobre 2021",
-                "lieu"=>"KNPLabs, Caen, Normandie", "info"=>"Participation à une journée de valorisation des projets open source sur github."],
-            ["id"=>1, "img"=>"Hacktoberfest2019.png", "tailleimg"=>"small", "lien"=>"https://hacktoberfest.digitalocean.com/", "titre"=>"Hacktoberfest 2019", "date"=>"Octobre 2019",
-                "lieu"=>"KNPLabs, Le DÔME, Caen, Normandie", "info"=>"Participation à une journée de valorisation des projets open source sur github."],
-            ["id"=>2, "img"=>"logo_anssi.png", "tailleimg"=>"tiny", "lien"=>"https://www.ssi.gouv.fr/", "titre"=>"ANSSI", "date"=>"",
-                "lieu"=>"", "info"=>"Se maintenir informé en matière de cybersécurité."],
-            ["id"=>3, "img"=>"logo_cnil.png", "tailleimg"=>"small", "lien"=>"https://www.cnil.fr/", "titre"=>"CNIL", "date"=>"",
-                "lieu"=>"", "info"=>"Se maintenir informé en matière de traitement des données."],
-            ["id"=>4, "img"=>"symfony-logo.svg", "tailleimg"=>"medium", "lien"=>"https://symfony.com/", "titre"=>"Symfony", "date"=>"",
-                "lieu"=>"", "info"=>"Alerte Google pour se maintenir informé."],
-            ["id"=>5, "img"=>"flutter-logo.png", "tailleimg"=>"tiny", "lien"=>"https://flutter.dev/", "titre"=>"Flutter", "date"=>"",
-                "lieu"=>"", "info"=>"Alerte Google pour se maintenir informé."],
-            ["id"=>6, "img"=>"cropped-logo.png", "tailleimg"=>"tiny", "lien"=>"https://www.pierre-giraud.com/", "titre"=>"Pierre-Giraud", "date"=>"",
-                "lieu"=>"", "info"=>"Toutes vos ressources sur le développement web. Apprenez à coder en HTML, CSS, JavaScript, Python, PHP…"],
-            ["id"=>7, "img"=>"E_mds.jpg", "tailleimg"=>"tiny", "lien"=>"https://www.youtube.com/channel/UCbHpuqhSjm3eYbqJQTlvJvg", "titre"=>"E mds", "date"=>"",
-                "lieu"=>"", "info"=>"APPRENDRE À PROGRAMMER de débutant au niveau BTS SIO", "fin"=>true],
+            ["id"=>0, "img"=>"logo_usedesign.png", "tailleimg"=>"small", "lien"=>"https://www.use.design/category/insights-fr/",
+                "titre"=>"UX et UI design, les deux faces de l’interface utilisateur", "date"=>"19 novembre 2022", "lieu"=>"",
+                "infos"=>[
+                    ["p"=>[
+                        [
+                            "a"=>[
+                                "href"=>"https://www.use.design/ux-ui-avec-use-design-agence-designer-paris/",
+                                "text"=>"UX et UI design, les deux faces de l’interface utilisateur"
+                            ]
+                        ]
+                    ]],
+                    ["p"=>[
+                        ["text"=>"Quelles sont les différences entre designer UX et designer UI ?"],
+                    ]],
+                    ["p"=>[
+                        ["text"=>"Ce sont deux disciplines complémentaires qui ont pour objectif de répondre aux attentes des utilisateurs."],
+                    ]],
+                    ["p"=>[
+                        ["text"=>"UX : expérience utilisateur (user Experience Design)"],
+                    ]],
+                    ["p"=>[
+                        ["text"=>"UI : interface utilisateur"],
+                    ]],
+                    ["p"=>[
+                        ["text"=>"Le "],
+                        ["gras"=>"UX designer"],
+                        [
+                            "text"=>" analyse les besoins, les retours des utilisateurs ainsi que la finalité du produit 
+                            pour créer l’architecture de l’interface. Si c’est pour un site commercial, 
+                            le designer UX doit mettre en place une stratégie pour inciter les utilisateurs 
+                            à acheter les produits et à les fidéliser."
+                        ],
+                    ]],
+                    ["p"=>[
+                        ["text"=>"Le "],
+                        ["gras"=>"UI designer"],
+                        [
+                            "text"=>" se concentre sur l’aspect esthétique de l’application, du logiciel ou site web… 
+                            Il veille à ce que le produit soit responsive, c'est-à-dire qu’il s’adapte au format mobile. 
+                            Il est parfois en charge de la charte graphique de l’interface, du logo… 
+                            Il doit rendre l'interface attractive."
+                        ],
+                    ]],
+                    ["p"=>[
+                        ["text"=>"Lequel est le plus important ?"],
+                    ]],
+                    ["p"=>[
+                        ["text"=>"Les deux."],
+                    ]],
+                    ["p"=>[
+                        ["text"=>"Certains concepteurs sont à la fois UX et UI designer."],
+                    ]],
+                ]
+            ],
+
+            ["id"=>1, "img"=>"logo_usedesign.png", "tailleimg"=>"small", "lien"=>"https://www.use.design/category/insights-fr/",
+                "titre"=>"Innovations UI / design", "date"=>"30 octobre 2022", "lieu"=>"",
+                "infos"=>[
+                    ["p"=>[
+                        [
+                            "a"=>[
+                                "href"=>"https://www.use.design/lagence-de-design-digital-et-le-design-numerique/",
+                                "text"=>"L’agence de design digital et le design numérique"
+                            ]
+                        ]
+                    ]],
+                    ["p"=>[
+                        ["gras"=>"Le design digital : un métier à plusieurs facettes"],
+                    ]],
+                    ["ul"=>[
+                        [
+                            "li"=>[
+                                ["text"=>"Le design graphique qui ne touche qu’au graphisme d’un outil digital."],
+                            ]
+                        ],
+                        [
+                            "li"=>[
+                                [
+                                    "text"=>"Le UX design qui s’attache à rendre l’expérience utilisateur 
+                                    d’un site web, d’un logiciel en ligne ou d’une application mobile mémorable afin 
+                                    de transformer ses utilisateurs en clients fidèles."
+                                ],
+                            ]
+                        ],
+                        [
+                            "li"=>[
+                                [
+                                    "text"=>"Le UI design qui a pour but de rendre l'esthétique d’un outil digital 
+                                    agréable, efficace et adaptée à tout support numérique."
+                                ],
+                            ]
+                        ],
+                        [
+                            "li"=>[
+                                [
+                                    "text"=>"Le design thinking qui a pour objectif de tirer le maximum du potentiel 
+                                    créatif des collaborateurs en utilisant les différentes techniques du design."
+                                ],
+                            ]
+                        ],
+                        [
+                            "li"=>[
+                                [
+                                    "text"=>"Le design sprint qui vise à repenser des produits et services ou en créer 
+                                    de nouveaux en concevant des prototypes en à peine 5 jours."
+                                ],
+                            ]
+                        ],
+                    ]],
+                    ["p"=>[
+                        ["gras"=>"Les outils du design numérique"],
+                    ]],
+                    ["ul"=>[
+                        [
+                            "li"=>[
+                                ["text"=>"Procreate : une application de graphisme digital pour iPad."],
+                            ]
+                        ],
+                        [
+                            "li"=>[
+                                [
+                                    "text"=>"Myfonts : un site internet proposant des polices de caractères 
+                                    téléchargeables sous format digital."
+                                ],
+                            ]
+                        ],
+                        [
+                            "li"=>[
+                                [
+                                    "text"=>"Clip Studio paint : des applications logicielles de peinture numérique."
+                                ],
+                            ]
+                        ],
+                        [
+                            "li"=>[
+                                [
+                                    "text"=>"Adobe Creative Cloud tools : applications et outils de design graphique 
+                                    et de retouche photo notamment."
+                                ],
+                            ]
+                        ],
+                        [
+                            "li"=>[
+                                [
+                                    "text"=>"Adobe Photoshop : application de retouche photo et de design digital."
+                                ],
+                            ]
+                        ],
+                        [
+                            "li"=>[
+                                [
+                                    "text"=>"Adobe Illustrator : logiciel de design graphique."
+                                ],
+                            ]
+                        ],
+                        [
+                            "li"=>[
+                                [
+                                    "text"=>"Wacom tools : tablettes et outils de design graphique."
+                                ],
+                            ]
+                        ],
+                    ]],
+                    ["p"=>[
+                        ["gras"=>"Pas de design numérique efficace sans marketing digital…"],
+                    ]],
+                    ["ul"=>[
+                        [
+                            "li"=>[
+                                [
+                                    "text"=>"Wishpond : est une plateforme qui permet de gérer les stratégies 
+                                    marketing sans avoir besoin d’un autre outil."
+                                ],
+                            ]
+                        ],
+                        [
+                            "li"=>[
+                                [
+                                    "text"=>"Google Ads : est un outil de publicité en ligne qui facilite 
+                                    la recherche de services proposés par des vendeurs."
+                                ],
+                            ]
+                        ],
+                        [
+                            "li"=>[
+                                [
+                                    "text"=>"Mail pro : aide à créer des mails professionnels pour les entreprises."
+                                ],
+                            ]
+                        ],
+                        [
+                            "li"=>[
+                                [
+                                    "text"=>"Hootsuite : est un outil qui permet de gérer la vue en même temps sur 
+                                    tous les réseaux sociaux connectés à l’utilisateur."
+                                ],
+                            ]
+                        ],
+                        [
+                            "li"=>[
+                                [
+                                    "text"=>"Google Analytics : permet de faire une évaluation de la performance d’un site."
+                                ],
+                            ]
+                        ],
+                        [
+                            "li"=>[
+                                [
+                                    "text"=>"…"
+                                ],
+                            ]
+                        ],
+                    ]],
+                    ["p"=>[
+                        ["gras"=>"Le design thinking"],
+                    ]],
+                    ["p"=>[
+                        [
+                            "text"=>"Peut être traduit par \"esprit design\". C’est une méthode/concept d’innovation 
+                            du travail pour tirer au maximum le potentiel créatif des collaborateurs tout en 
+                            utilisant des outils du design comme :"
+                        ],
+                    ]],
+                    ["ul"=>[
+                        [
+                            "li"=>[
+                                [
+                                    "text"=>"La carte de l’empathie"
+                                ],
+                            ]
+                        ],
+                        [
+                            "li"=>[
+                                [
+                                    "text"=>"Le parcours utilisateur"
+                                ],
+                            ]
+                        ],
+                        [
+                            "li"=>[
+                                [
+                                    "text"=>"Les espoirs et les craintes"
+                                ],
+                            ]
+                        ],
+                        [
+                            "li"=>[
+                                [
+                                    "text"=>"Les vignettes d’idées"
+                                ],
+                            ]
+                        ],
+                        [
+                            "li"=>[
+                                [
+                                    "text"=>"Le scénario la grille de priorisation"
+                                ],
+                            ]
+                        ],
+                        [
+                            "li"=>[
+                                [
+                                    "text"=>"La déclaration des besoins"
+                                ],
+                            ]
+                        ],
+                        [
+                            "li"=>[
+                                [
+                                    "text"=>"Les hypothèses et questions"
+                                ],
+                            ]
+                        ],
+                        [
+                            "li"=>[
+                                [
+                                    "text"=>"La grille de retours"
+                                ],
+                            ]
+                        ],
+                        [
+                            "li"=>[
+                                [
+                                    "text"=>"Aujourd’hui, demain et après-demain"
+                                ],
+                            ]
+                        ],
+                    ]],
+                ]
+            ],
+
+            ["id"=>2, "img"=>"logo_fomantic.png", "tailleimg"=>"tiny", "lien"=>"https://fomantic-ui.com/", "titre"=>"Nouveautés chez Fomantic-UI 2.9.0",
+                "date"=>"23 octobre 2022", "lieu"=>"",
+                "infos"=>[
+                    ["p"=>[
+                        [
+                            "text"=>"Fomantic-UI est un framework UI qui facilite la création de sites responsives et esthétiques. 
+                            Voici les dernières évolutions sur Fomantic-UI. En effet, une toute nouvelle version vient de sortir le 9 octobre 2022. 
+                            Je vais vous présenter les 5 points d’évolutions qui me paraissent les plus intéressants."
+                        ]
+                    ]],
+                    ["ul"=>[
+                        [
+                            "li"=>[
+                                [
+                                    "a"=>[
+                                        "href"=>"https://fomantic-ui.com/modules/flyout.html",
+                                        "text"=>"Flyout"
+                                    ]
+                                ],
+                                ["text"=>" : est un nouveau composant UI. Il est la fusion entre le composant du "],
+                                [
+                                    "a"=>[
+                                        "href"=>"https://fomantic-ui.com/modules/modal.html",
+                                        "text"=>"Modal"
+                                    ]
+                                ],
+                                ["text"=>" et du "],
+                                [
+                                    "a"=>[
+                                        "href"=>"https://fomantic-ui.com/modules/sidebar.html",
+                                        "text"=>"Sidebar"
+                                    ]
+                                ],
+                                ["text"=>". Il permet de faire afficher un contenu à partir du bord de la page superposé à la page."],
+                            ]
+                        ],
+                        [
+                            "li"=>[
+                                [
+                                    "a"=>[
+                                        "href"=>"https://fomantic-ui.com/elements/input.html",
+                                        "text"=>"Input"
+                                    ]
+                                ],
+                                ["text"=>" : supporte enfin le "],
+                                [
+                                    "a"=>[
+                                        "href"=>"https://fomantic-ui.com/elements/input.html#file-input",
+                                        "text"=>"File input"
+                                    ]
+                                ],
+                                ["text"=>" qui permet d'ajouter un ou plusieurs fichiers dans l'input."],
+                            ]
+                        ],
+                        [
+                            "li"=>[
+                                [
+                                    "a"=>[
+                                        "href"=>"https://fomantic-ui.com/modules/calendar.html",
+                                        "text"=>"Calendar"
+                                    ]
+                                ],
+                                [
+                                    "text"=>" : est un champ input qui permet de sélectionner une date. 
+                                    Il peut désormais entièrement modifier le format de la date avec les ",
+                                ],
+                                [
+                                    "a"=>[
+                                        "href"=>"https://fomantic-ui.com/modules/calendar.html#custom-format",
+                                        "text"=>"tokens"
+                                    ],
+                                ],
+                                ["text"=>"."],
+                            ]
+                        ],
+                        [
+                            "li"=>[
+                                [
+                                    "a"=>[
+                                        "href"=>"https://fomantic-ui.com/collections/table.html",
+                                        "text"=>"Table"
+                                    ]
+                                ],
+                                ["text"=>" : est maintenant capable de "],
+                                [
+                                    "a"=>[
+                                        "href"=>"https://fomantic-ui.com/collections/table.html#scrolling",
+                                        "text"=>"défiler à la verticale et à l’horizontale"
+                                    ]
+                                ],
+                                ["text"=>" et elle peut aussi "],
+                                [
+                                    "a"=>[
+                                        "href"=>"https://fomantic-ui.com/collections/table.html#stuck",
+                                        "text"=>"bloquer"
+                                    ]
+                                ],
+                                ["text"=>" des colonnes qui ne sont pas soumises au défilement horizontal."],
+                            ]
+                        ],
+                    ]],
+                    ["p"=>[
+                        ["text"=>"Pour retrouver l’ensemble des nouvelles fonctionnalités cliquez "],
+                        [
+                            "a"=>[
+                                "href"=>"https://fomantic-ui.com/introduction/new.html",
+                                "text"=>"ici"
+                            ]
+                        ],
+                        ["text"=>"."],
+                    ]],
+                ],
+                "fin"=>true],
+            ["id"=>4, "img"=>"logo_anssi.png", "tailleimg"=>"tiny", "lien"=>"https://www.ssi.gouv.fr/", "titre"=>"ANSSI",
+                "date"=>"", "lieu"=>"",
+                "infos"=>[
+                    ["objectif"=>"Se maintenir informé en matière de cybersécurité."]
+                ]
+            ],
+            ["id"=>5, "img"=>"logo_cnil.png", "tailleimg"=>"small", "lien"=>"https://www.cnil.fr/", "titre"=>"CNIL",
+                "date"=>"", "lieu"=>"",
+                "infos"=>[
+                    ["objectif"=>"Se maintenir informé en matière de traitement des données."]
+                ]
+            ],
+            ["id"=>6, "img"=>"symfony-logo.svg", "tailleimg"=>"medium", "lien"=>"https://symfony.com/", "titre"=>"Symfony",
+                "date"=>"", "lieu"=>"",
+                "infos"=>[
+                    ["objectif"=>"Alerte Google pour se maintenir informé."]
+                ]
+            ],
+            ["id"=>7, "img"=>"flutter-logo.png", "tailleimg"=>"tiny", "lien"=>"https://flutter.dev/", "titre"=>"Flutter",
+                "date"=>"", "lieu"=>"",
+                "infos"=>[
+                    ["objectif"=>"Alerte Google pour se maintenir informé."]
+                ]
+            ],
+            ["id"=>8, "img"=>"cropped-logo.png", "tailleimg"=>"tiny", "lien"=>"https://www.pierre-giraud.com/", "titre"=>"Pierre-Giraud",
+                "date"=>"", "lieu"=>"",
+                "infos"=>[
+                    ["objectif"=>"Toutes vos ressources sur le développement web. Apprenez à coder en HTML, CSS, JavaScript, Python, PHP…"]
+                ]
+            ],
+            ["id"=>9, "img"=>"E_mds.jpg", "tailleimg"=>"tiny", "lien"=>"https://www.youtube.com/channel/UCbHpuqhSjm3eYbqJQTlvJvg", "titre"=>"E mds",
+                "date"=>"", "lieu"=>"",
+                "infos"=>[
+                    ["objectif"=>"APPRENDRE À PROGRAMMER de débutant au niveau BTS SIO."]
+                ]
+            ],
+            ["id"=>10, "img"=>"Hacktoberfest2021.png", "tailleimg"=>"small", "lien"=>"https://hacktoberfest.com/", "titre"=>"Hacktoberfest 2021",
+                "date"=>"Octobre 2021", "lieu"=>"KNPLabs, Caen, Normandie",
+                "infos"=>[
+                    ["objectif"=>"Participation à une journée de valorisation des projets open source sur github."]
+                ]
+            ],
+            ["id"=>11, "img"=>"Hacktoberfest2019.png", "tailleimg"=>"small", "lien"=>"https://hacktoberfest.com/", "titre"=>"Hacktoberfest 2019",
+                "date"=>"Octobre 2019", "lieu"=>"KNPLabs, Le DÔME, Caen, Normandie",
+                "infos"=>[
+                    ["objectif"=>"Participation à une journée de valorisation des projets open source sur github."]
+                ],
+                "fin"=>true],
         ];
 
 		$this->loadView('MainController/Parcours.html', ['experiences'=>$experiences, 'formations'=>$formations, 'certifications'=>$certifications, 'veilles'=>$veilles]);
