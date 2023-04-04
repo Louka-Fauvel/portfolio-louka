@@ -76,7 +76,25 @@
     {% endfor %}
 </div>
 
-<h2 id="certifications" class="reveal-invisible-2 text-white">Certifications</h2>
+<h2 id="certifications" class="reveal-invisible-2 text-white">Certifications et formations</h2>
+
+<div class="ui equal width center aligned padded grid">
+    {% for tableauCertifFormat in tableauCertifFormats %}
+    {% if tableauCertifFormat['id'] % 4==0 %}
+    <div class="row reveal-invisible-3">
+        {% endif %}
+        <div class="ui segment column">
+            <img class="ui centered {{tableauCertifFormat['tailleimg']}} rounded image image-cursor" src="assets/img/{{tableauCertifFormat['img']}}" onclick="modalRGPD('.ui.basic.modal.certifFormat{{tableauCertifFormat.id}}')">
+        </div>
+
+        <div class="ui basic modal certifFormat{{tableauCertifFormat['id']}}">
+            <img class="ui {{tableauCertifFormat['taillemodal']}} image" src="assets/img/{{tableauCertifFormat['img']}}">
+        </div>
+        {% if tableauCertifFormat['fin'] == true %}
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
 
 <div class="ui equal width center aligned padded grid">
     {% for certification in certifications %}

@@ -77,15 +77,15 @@ if(window.location.origin.valueOf()+"/" !== window.location.href.valueOf()) {
 
         setTimeout(function () {
             loader.classList.add('circulaire-accueil');
-        }, 3000);
+        }, 1000);
         setTimeout(function () {
             loader.classList.add('fondu-accueil');
-        }, 4000);
-        setTimeout(rainActive, 5000);
-        setTimeout(apparitionText, 5000);
+        }, 2000);
+        setTimeout(rainActive, 2500);
+        setTimeout(apparitionText, 2500);
         setTimeout(function () {
             loader.remove();
-        }, 7000);
+        }, 5000);
 
     });
 

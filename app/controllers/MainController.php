@@ -90,6 +90,11 @@ class MainController extends \controllers\ControllerBase{
                 "titreconcept"=>"", "infoconcepts"=>"", "fin"=>true],
         ];
 
+        $tableauCertifFormats = [
+            ["id"=>0, "img"=>"certifications.png", "tailleimg"=>"large", "taillemodal"=>"fluid"],
+            ["id"=>2, "img"=>"formations.png", "tailleimg"=>"large", "taillemodal"=>"fluid", "fin"=>true],
+        ];
+
         $certifications = [
             ["id"=>0, "img"=>"certif_secnumacademie.png", "tailleimg"=>"large", "taillemodal"=>"fluid"],
             ["id"=>1, "img"=>"certif_toeic.png", "tailleimg"=>"small", "taillemodal"=>"centered big"],
@@ -556,7 +561,7 @@ class MainController extends \controllers\ControllerBase{
                 "fin"=>true],
         ];
 
-		$this->loadView('MainController/Parcours.html', ['experiences'=>$experiences, 'formations'=>$formations, 'certifications'=>$certifications, 'veilles'=>$veilles]);
+		$this->loadView('MainController/Parcours.html', ['experiences'=>$experiences, 'formations'=>$formations, 'tableauCertifFormats'=>$tableauCertifFormats, 'certifications'=>$certifications, 'veilles'=>$veilles]);
 
 	}
 
