@@ -69,6 +69,7 @@ $('.message .close')
 ;
 if(window.location.origin.valueOf()+"/" !== window.location.href.valueOf()) {
     apparitionText();
+    pcPhone();
 } else {
 
     const loader = document.querySelector('.loader-accueil');
@@ -89,4 +90,35 @@ if(window.location.origin.valueOf()+"/" !== window.location.href.valueOf()) {
 
     });
 
+}
+
+function pcPhone() {
+
+    if (screen.width > 1000 && screen.height > 1000) {
+        document.querySelector('.column.reveal-invisible-2').classList.add('pc');
+        setInterval(glitchInterval, 5000, false);
+        setInterval(glitchInterval, 7000, true);
+    } else {
+        document.querySelector('.column.reveal-invisible-2').classList.add('telephone');
+    }
+
+}
+
+function glitchInterval(x) {
+
+    i = 1;
+    j = 1;
+    console.log(x);
+
+    if(x === true) {
+        document.querySelectorAll('.glitchImg').forEach(function (g) {
+            g.classList.remove('glitch'+i);
+            i++;
+        });
+    } else {
+        document.querySelectorAll('.glitchImg').forEach(function (g) {
+            g.classList.add('glitch'+j);
+            j++;
+        });
+    }
 }
