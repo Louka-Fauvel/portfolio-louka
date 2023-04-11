@@ -69,7 +69,13 @@ $('.message .close')
 ;
 if(window.location.origin.valueOf()+"/" !== window.location.href.valueOf()) {
     apparitionText();
-    pcPhone();
+    if(window.location.href.valueOf() === window.location.origin.valueOf()+"/a_propos/") {
+        pcPhone();
+        setInterval(function() {
+            setTimeout(glitchInterval, 1000, false);
+            setTimeout(glitchInterval, 3500, true);
+        }, 10000);
+    }
 } else {
 
     const loader = document.querySelector('.loader-accueil');
@@ -96,8 +102,6 @@ function pcPhone() {
 
     if (screen.width > 1000 && screen.height > 1000) {
         document.querySelector('.column.reveal-invisible-2').classList.add('pc');
-        setInterval(glitchInterval, 5000, false);
-        setInterval(glitchInterval, 7000, true);
     } else {
         document.querySelector('.column.reveal-invisible-2').classList.add('telephone');
     }
@@ -106,9 +110,8 @@ function pcPhone() {
 
 function glitchInterval(x) {
 
-    i = 1;
-    j = 1;
-    console.log(x);
+    let i = 1;
+    let j = 1;
 
     if(x === true) {
         document.querySelectorAll('.glitchImg').forEach(function (g) {
