@@ -620,8 +620,8 @@ class MainController extends \controllers\ControllerBase{
             $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
             //Recipients
-            $mail->setFrom('');
-            $mail->addAddress('');     //Add a recipient
+            $mail->setFrom('');         //Email qui envoie
+            $mail->addAddress('');      //Email qui reçoit
             //$mail->addAddress('ellen@example.com');               //Name is optional
             //$mail->addReplyTo('info@example.com', 'Information');
             //$mail->addCC('cc@example.com');
