@@ -116,12 +116,12 @@ class ProjectController extends \controllers\ControllerBase{
                 "date"=>"Septembre - Décembre 2022"
             ],
 
-            ["route"=>"padlet", "titre"=>"Padlet", "titreinfo"=>"", "tailleimg"=>"medium", "img"=>"",
-                "objectif"=>"Créer un Padlet sur ordinateur",
+            ["route"=>"planitpoker", "titre"=>"PlanitPoker", "titreinfo"=>"", "tailleimg"=>"medium", "img"=>"planitpoker_logo.png",
+                "objectif"=>"Créer un PlanitPoker.",
                 "liencontenu"=>"",
-                "liengithub"=>"https://github.com/Louka-Fauvel/padlet",
+                "liengithub"=>"https://github.com/supavenir/planitPoker-LaJavanaise",
                 "lienconsigne"=>"",
-                "langages"=>"?", "outils"=>"Ubiquity, React, Fomantic UI",
+                "langages"=>"Javascript, PHP", "outils"=>"Ubiquity, Next.js, Ant Design",
                 "competences"=>"Travailler en mode projet (planifier les activités)",
                 "date"=>"Mars - Juin 2023"
             ],

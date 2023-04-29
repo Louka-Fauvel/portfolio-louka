@@ -583,7 +583,7 @@ class MainController extends \controllers\ControllerBase{
             ["id"=>2, "titre"=>"Proxmox-admin", "titreinfo"=>"", "route"=>"proxmox-admin", "tailleimg"=>"large", "img"=>"proxmox-admin.jpg"],
             ["id"=>3, "titre"=>"Multi-timer", "titreinfo"=>"", "route"=>"multi-timer", "tailleimg"=>"small", "img"=>"multi-timer.jpg"],
             ["id"=>4, "titre"=>"E-music", "titreinfo"=>"", "route"=>"e-music", "tailleimg"=>"large", "img"=>"e-music.png"],
-            ["id"=>5, "titre"=>"Padlet", "titreinfo"=>"", "route"=>"padlet", "tailleimg"=>"small", "img"=>"", "fin"=>true],
+            ["id"=>5, "titre"=>"PlanitPoker", "titreinfo"=>"", "route"=>"planitpoker", "tailleimg"=>"medium", "img"=>"planitpoker_logo.png", "fin"=>true],
         ];
 
         $Annee1bloc1projets = [
