@@ -23,19 +23,91 @@
                 </p>
                 {% if experience['competences'] != '' %}
                 <p><b>Compétences abordées :</b>
-                    <br>&#8226; {{experience['competences']}}
-                    {% if experience['competences2'] != '' %}
-                        <br>&#8226; {{experience['competences2']}}
+                    {% if experience['competences'] != '' %}
+                        <br>&#8226; {{experience['competences']['text']}} (
+                        {% for sous_text in experience['competences']['sous-texts'] %}
+                        {% if sous_text['lien'] == '' %}
+                            {{sous_text['text']}}
+                            {% if sous_text['fin'] != true %}
+                            ,
+                            {% endif %}
+                        {% else %}
+                            <a href="{{sous_text['lien']}}" target="_blank">{{sous_text['text']}}</a>
+                        {% if sous_text['fin'] != true %}
+                            ,
+                        {% endif %}
                     {% endif %}
-                    {% if experience['competences3'] != '' %}
-                        <br>&#8226; {{experience['competences3']}}
+                    {% endfor %}
+                    )
+                {% endif %}
+                {% if experience['competences2'] != '' %}
+                    <br>&#8226; {{experience['competences2']['text']}} (
+                    {% for sous_text in experience['competences2']['sous-texts'] %}
+                    {% if sous_text['lien'] == '' %}
+                        {{sous_text['text']}}
+                        {% if sous_text['fin'] != true %}
+                        ,
+                        {% endif %}
+                    {% else %}
+                        <a href="{{sous_text['lien']}}" target="_blank">{{sous_text['text']}}</a>
+                        {% if sous_text['fin'] != true %}
+                        ,
+                        {% endif %}
                     {% endif %}
-                    {% if experience['competences4'] != '' %}
-                        <br>&#8226; {{experience['competences4']}}
+                    {% endfor %}
+                    )
+                {% endif %}
+                {% if experience['competences3'] != '' %}
+                    <br>&#8226; {{experience['competences3']['text']}} (
+                    {% for sous_text in experience['competences3']['sous-texts'] %}
+                    {% if sous_text['lien'] == '' %}
+                        {{sous_text['text']}}
+                        {% if sous_text['fin'] != true %}
+                        ,
+                        {% endif %}
+                    {% else %}
+                        <a href="{{sous_text['lien']}}" target="_blank">{{sous_text['text']}}</a>
+                        {% if sous_text['fin'] != true %}
+                        ,
+                        {% endif %}
                     {% endif %}
-                    {% if experience['competences5'] != '' %}
-                        <br>&#8226; {{experience['competences5']}}
+                    {% endfor %}
+                    )
+                {% endif %}
+                {% if experience['competences4'] != '' %}
+                    <br>&#8226; {{experience['competences4']['text']}} (
+                    {% for sous_text in experience['competences4']['sous-texts'] %}
+                    {% if sous_text['lien'] == '' %}
+                        {{sous_text['text']}}
+                        {% if sous_text['fin'] != true %}
+                        ,
+                        {% endif %}
+                    {% else %}
+                        <a href="{{sous_text['lien']}}" target="_blank">{{sous_text['text']}}</a>
+                        {% if sous_text['fin'] != true %}
+                        ,
+                        {% endif %}
                     {% endif %}
+                    {% endfor %}
+                    )
+                {% endif %}
+                {% if experience['competences5'] != '' %}
+                    <br>&#8226; {{experience['competences5']['text']}} (
+                    {% for sous_text in experience['competences5']['sous-texts'] %}
+                    {% if sous_text['lien'] == '' %}
+                        {{sous_text['text']}}
+                        {% if sous_text['fin'] != true %}
+                        ,
+                        {% endif %}
+                    {% else %}
+                        <a href="{{sous_text['lien']}}" target="_blank">{{sous_text['text']}}</a>
+                        {% if sous_text['fin'] != true %}
+                        ,
+                        {% endif %}
+                    {% endif %}
+                    {% endfor %}
+                    )
+                {% endif %}
                 </p>
                 <a href="assets/doc/{{experience['compte-rendu']}}" class="ui basic button" target="_blank">Compte-rendu</a>
                 {% endif %}
@@ -83,12 +155,16 @@
     {% if tableauCertifFormat['id'] % 4==0 %}
     <div class="row reveal-invisible-3">
         {% endif %}
-        <div class="ui segment column">
+        <div class="ui segment column" data-tooltip="{{tableauCertifFormat['nom']}}" data-position="{{tableauCertifFormat['position']}}" data-variation="large">
             <img class="ui centered {{tableauCertifFormat['tailleimg']}} rounded image image-cursor" src="assets/img/{{tableauCertifFormat['img']}}" onclick="modalRGPD('.ui.basic.modal.certifFormat{{tableauCertifFormat.id}}')">
         </div>
 
         <div class="ui basic modal certifFormat{{tableauCertifFormat['id']}}">
-            <img class="ui {{tableauCertifFormat['taillemodal']}} image" src="assets/img/{{tableauCertifFormat['img']}}">
+            <i class="close icon circular inverted red"></i>
+            <div class="header"></div>
+            <div class="image content">
+                <img class="ui {{tableauCertifFormat['taillemodal']}} image" src="assets/img/{{tableauCertifFormat['img']}}">
+            </div>
         </div>
         {% if tableauCertifFormat['fin'] == true %}
     </div>
@@ -101,12 +177,16 @@
     {% if certification['id'] % 4==0 %}
     <div class="row reveal-invisible-3">
     {% endif %}
-        <div class="ui segment column">
+        <div class="ui segment column" data-tooltip="{{certification['nom']}}" data-position="{{certification['position']}}" data-variation="large">
             <img class="ui centered {{certification['tailleimg']}} rounded image image-cursor" src="assets/img/{{certification['img']}}" onclick="modalRGPD('.ui.basic.modal.certif{{certification.id}}')">
         </div>
 
         <div class="ui basic modal certif{{certification['id']}}">
-            <img class="ui {{certification['taillemodal']}} image" src="assets/img/{{certification['img']}}">
+            <i class="close icon circular inverted red"></i>
+            <div class="header"></div>
+            <div class="image content">
+                <img class="ui {{certification['taillemodal']}} image" src="assets/img/{{certification['img']}}">
+            </div>
         </div>
     {% if certification['fin'] == true %}
     </div>
@@ -116,11 +196,19 @@
 
 <h2 id="veille" class="reveal-invisible-2 text-white">Veille technologique</h2>
 
-<p class="reveal-invisible-3 text-white">La veille technologique est l'observation et l'analyse de
+<p class="reveal-invisible-3 text-white">
+    La veille technologique est l'observation et l'analyse de
     l'environnement scientifique, technique et technologique (...)
     pour en déduire les menaces et les opportunités de
-    développement. <i>Jakobiak, 1992</i></p>
-<p class="reveal-invisible-4 text-white"><b>Compétence abordée :</b> Organiser son développement professionnel (mettre en oeuvre des outils et stratégies de veille informationnelle)</p>
+    développement. <i>Jakobiak, 1992</i>
+</p>
+<p class="reveal-invisible-4 text-white">
+    Pour réaliser ma veille, je me suis tout d'abord interrogé sur le sujet de ma veille.
+    J'ai choisi de m'intéresser aux nouveautés en matière d'interface utilisateur.
+    J'ai lancé une alerte hebdomadaire sur Google. J'ai consulté plusieurs sites.
+    J'ai choisi des articles, j'ai pris des notes et j'ai réalisé une synthèse pour chaque.
+</p>
+<p class="reveal-invisible-5 text-white"><b>Compétence abordée :</b> Organiser son développement professionnel (mettre en œuvre des outils et stratégies de veille informationnelle)</p>
 
 <div class="ui equal width left aligned padded grid">
     {% for veille in veilles %}

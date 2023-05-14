@@ -41,18 +41,90 @@
     <h2 class="reveal-invisible-2">Compétences abordées :</h2>
 
     <p class="reveal-invisible-3">
-        &#8226; {{info['competences']}}
+        {% if info['competences'] != '' %}
+            &#8226; {{info['competences']['text']}} (
+            {% for sous_text in info['competences']['sous-texts'] %}
+            {% if sous_text['lien'] == '' %}
+                {{sous_text['text']}}
+                {% if sous_text['fin'] != true %}
+                ,
+                {% endif %}
+            {% else %}
+                <a href="{{sous_text['lien']}}" target="_blank">{{sous_text['text']}}</a>
+                {% if sous_text['fin'] != true %}
+                ,
+                {% endif %}
+            {% endif %}
+            {% endfor %}
+            )
+        {% endif %}
         {% if info['competences2'] != '' %}
-            <br>&#8226; {{info['competences2']}}
+            <br>&#8226; {{info['competences2']['text']}} (
+            {% for sous_text in info['competences2']['sous-texts'] %}
+            {% if sous_text['lien'] == '' %}
+                {{sous_text['text']}}
+                {% if sous_text['fin'] != true %}
+                ,
+                {% endif %}
+            {% else %}
+                <a href="{{sous_text['lien']}}" target="_blank">{{sous_text['text']}}</a>
+                {% if sous_text['fin'] != true %}
+                ,
+                {% endif %}
+            {% endif %}
+            {% endfor %}
+            )
         {% endif %}
         {% if info['competences3'] != '' %}
-            <br>&#8226; {{info['competences3']}}
+            <br>&#8226; {{info['competences3']['text']}} (
+            {% for sous_text in info['competences3']['sous-texts'] %}
+            {% if sous_text['lien'] == '' %}
+                {{sous_text['text']}}
+                {% if sous_text['fin'] != true %}
+                ,
+                {% endif %}
+            {% else %}
+                <a href="{{sous_text['lien']}}" target="_blank">{{sous_text['text']}}</a>
+                {% if sous_text['fin'] != true %}
+                ,
+                {% endif %}
+            {% endif %}
+            {% endfor %}
+            )
         {% endif %}
         {% if info['competences4'] != '' %}
-            <br>&#8226; {{info['competences4']}}
+            <br>&#8226; {{info['competences4']['text']}} (
+            {% for sous_text in info['competences4']['sous-texts'] %}
+            {% if sous_text['lien'] == '' %}
+                {{sous_text['text']}}
+                {% if sous_text['fin'] != true %}
+                ,
+                {% endif %}
+            {% else %}
+                <a href="{{sous_text['lien']}}" target="_blank">{{sous_text['text']}}</a>
+                {% if sous_text['fin'] != true %}
+                ,
+                {% endif %}
+            {% endif %}
+            {% endfor %}
+            )
         {% endif %}
         {% if info['competences5'] != '' %}
-            <br>&#8226; {{info['competences5']}}
+            <br>&#8226; {{info['competences5']['text']}} (
+            {% for sous_text in info['competences5']['sous-texts'] %}
+            {% if sous_text['lien'] == '' %}
+                {{sous_text['text']}}
+                {% if sous_text['fin'] != true %}
+                ,
+                {% endif %}
+            {% else %}
+                <a href="{{sous_text['lien']}}" target="_blank">{{sous_text['text']}}</a>
+                {% if sous_text['fin'] != true %}
+                ,
+                {% endif %}
+            {% endif %}
+            {% endfor %}
+            )
         {% endif %}
     </p>
 

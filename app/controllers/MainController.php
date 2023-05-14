@@ -34,20 +34,96 @@ class MainController extends \controllers\ControllerBase{
                 "semaines"=>"7 semaines", "lieu"=>"Caen, Normandie",
                 "info"=>"Collaboration à plusieurs projets avec Angular et Python. Réalisation de tests d'intégration avec Pipeline.",
                 "titrelangage"=>"Langages informatiques utilisés :", "infolangage"=>"Angular, Python",
-                "competences"=>"Répondre aux incidents et aux demandes d'assistance et d'évolution (traiter des demandes concernant les applications)",
-                "competences2"=>"Travailler en mode projet (planifier les activités)",
-                "competences3"=>"Mettre à disposition des utilisateurs un service informatique (Réaliser les tests d'intégration et d'acceptation d'un service)",
-                "competences4"=>"Organiser son développement professionnel (mettre en place son environnement d'apprentissage personnel)",
+                "competences"=>[
+                    "text"=>"Répondre aux incidents et aux demandes d'assistance et d'évolution",
+                    "sous-texts"=>[
+                        [
+                            "text"=>"traiter des demandes concernant les applications",
+                            "lien"=>"https://github.com/Louka-Fauvel/sio-skills/tree/a_1-2/myDocuments/bloc1-support/a_1-2#stage-chez-fime",
+                            "fin"=>true,
+                        ],
+                    ],
+                ],
+                "competences2"=>[
+                    "text"=>"Travailler en mode projet",
+                    "sous-texts"=>[
+                        [
+                            "text"=>"planifier les activités",
+                            "lien"=>"",
+                            "fin"=>true,
+                        ],
+                    ],
+                ],
+                "competences3"=>[
+                    "text"=>"Mettre à disposition des utilisateurs un service informatique",
+                    "sous-texts"=>[
+                        [
+                            "text"=>"réaliser les tests d'intégration et d'acceptation d'un service",
+                            "lien"=>"https://github.com/Louka-Fauvel/sio-skills/tree/a_1-5/myDocuments/bloc1-support/a_1-5#stage-chez-fime",
+                            "fin"=>true,
+                        ],
+                    ],
+                ],
+                "competences4"=>[
+                    "text"=>"Organiser son développement professionnel",
+                    "sous-texts"=>[
+                        [
+                            "text"=>"mettre en place son environnement d'apprentissage personnel",
+                            "lien"=>"https://github.com/Louka-Fauvel/sio-skills/tree/a_1-6/myDocuments/bloc1-support/a_1-6#stage-chez-fime",
+                            "fin"=>true,
+                        ],
+                    ],
+                ],
                 "compte-rendu"=>"Stage_Fime.pdf"],
 
             ["id"=>1, "img"=>"Altilog.webp", "titre"=>"Altilog : Agence de développement", "date"=>"Décembre 2021 - Février 2022",
                 "semaines"=>"7 semaines", "lieu"=>"Caen, Normandie",
                 "info"=>"Découverte et utilisation du Wlangage avec le logiciel WEBDEV 25 et WEBDEV 27 à travers différents projets de l'entreprise.",
                 "titrelangage"=>"Langage informatique utilisé :", "infolangage"=>"Wlangage",
-                "competences"=>"Gérer le patrimoine informatique (Exploiter des référentiels, normes et standards adoptés par le prestataire informatique, mettre en place et vérifier les niveaux d'habilitation associés à un service)",
-                "competences2"=>"Répondre aux incidents et aux demandes d'assistance et d'évolution (traiter des demandes concernant les applications)",
-                "competences3"=>"Développer la présence en ligne de l'organisation (participer à l'évolution d'un site web exploitant les données de l'organisation)",
-                "competences4"=>"Organiser son développement professionnel (mettre en place son environnement d'apprentissage personnel)",
+                "competences"=>[
+                    "text"=>"Gérer le patrimoine informatique",
+                    "sous-texts"=>[
+                        [
+                            "text"=>"exploiter des référentiels, normes et standards adoptés par le prestataire informatique",
+                            "lien"=>"https://github.com/Louka-Fauvel/sio-skills/tree/a_1-1/myDocuments/bloc1-support/a_1-1#stage-chez-altilog",
+                        ],
+                        [
+                            "text"=>"mettre en place et vérifier les niveaux d'habilitation associés à un service",
+                            "lien"=>"https://github.com/Louka-Fauvel/sio-skills/tree/a_1-1/myDocuments/bloc1-support/a_1-1#stage-chez-altilog-1",
+                            "fin"=>true,
+                        ],
+                    ],
+                ],
+                "competences2"=>[
+                    "text"=>"Répondre aux incidents et aux demandes d'assistance et d'évolution",
+                    "sous-texts"=>[
+                        [
+                            "text"=>"traiter des demandes concernant les applications",
+                            "lien"=>"https://github.com/Louka-Fauvel/sio-skills/tree/a_1-2/myDocuments/bloc1-support/a_1-2#stage-chez-altilog",
+                            "fin"=>true,
+                        ],
+                    ],
+                ],
+                "competences3"=>[
+                    "text"=>"Développer la présence en ligne de l'organisation",
+                    "sous-texts"=>[
+                        [
+                            "text"=>"participer à l'évolution d'un site web exploitant les données de l'organisation",
+                            "lien"=>"https://github.com/Louka-Fauvel/sio-skills/tree/a_1-3/myDocuments/bloc1-support/a_1-3#stage-chez-altilog",
+                            "fin"=>true,
+                        ],
+                    ],
+                ],
+                "competences4"=>[
+                    "text"=>"Organiser son développement professionnel",
+                    "sous-texts"=>[
+                        [
+                            "text"=>"mettre en place son environnement d'apprentissage personnel",
+                            "lien"=>"https://github.com/Louka-Fauvel/sio-skills/tree/a_1-6/myDocuments/bloc1-support/a_1-6#stage-chez-altilog",
+                            "fin"=>true,
+                        ],
+                    ],
+                ],
                 "compte-rendu"=>"Stage_ALTILOG.pdf"],
 
             ["id"=>2, "img"=>"KNPLabs.jpg", "titre"=>"KNPLabs : Agence de développement", "date"=>"Mai - Juin 2021",
@@ -55,7 +131,16 @@ class MainController extends \controllers\ControllerBase{
                 "info"=>"Approfondissement de mes connaissances sur Github, communication au sein d'une équipe avec des pull requests, 
                     utilisation des objets avec PHP et découverte du framework Symfony. Découverte du management d'une agence de développement.",
                 "titrelangage"=>"Langages informatiques utilisés :", "infolangage"=>"HTML, PHP, CSS",
-                "competences"=>"Organiser son développement professionnel (mettre en place son environnement d'apprentissage personnel)",
+                "competences"=>[
+                    "text"=>"Organiser son développement professionnel",
+                    "sous-texts"=>[
+                        [
+                            "text"=>"mettre en place son environnement d'apprentissage personnel",
+                            "lien"=>"https://github.com/Louka-Fauvel/sio-skills/tree/a_1-5/myDocuments/bloc1-support/a_1-5#stage-chez-fime",
+                            "fin"=>true,
+                        ],
+                    ],
+                ],
                 "compte-rendu"=>"Stage_KNPLabs.pdf"],
 
             ["id"=>3, "img"=>"Erasmus.png", "titre"=>"ERASMUS + : Institut Lemonnier", "date"=>"Octobre 2019",
@@ -91,19 +176,24 @@ class MainController extends \controllers\ControllerBase{
         ];
 
         $tableauCertifFormats = [
-            ["id"=>0, "img"=>"certifications.png", "tailleimg"=>"large", "taillemodal"=>"fluid"],
-            ["id"=>2, "img"=>"formations.png", "tailleimg"=>"large", "taillemodal"=>"fluid", "fin"=>true],
+            ["id"=>0, "img"=>"certifications.png", "tailleimg"=>"large", "taillemodal"=>"fluid", "nom"=>"Les certifications", "position"=>"top left"],
+            ["id"=>2, "img"=>"formations.png", "tailleimg"=>"large", "taillemodal"=>"fluid", "nom"=>"Les formations", "position"=>"top right", "fin"=>true],
         ];
 
         $certifications = [
-            ["id"=>0, "img"=>"certif_secnumacademie.png", "tailleimg"=>"large", "taillemodal"=>"fluid"],
-            ["id"=>1, "img"=>"certif_toeic.png", "tailleimg"=>"small", "taillemodal"=>"centered big"],
-            ["id"=>2, "img"=>"certif_html_css.png", "tailleimg"=>"large", "taillemodal"=>"fluid"],
-            ["id"=>3, "img"=>"certif_javascript.png", "tailleimg"=>"large", "taillemodal"=>"fluid", "fin"=>true],
-            ["id"=>4, "img"=>"certif_app_android.png", "tailleimg"=>"large", "taillemodal"=>"fluid"],
-            ["id"=>5, "img"=>"certif_sql.png", "tailleimg"=>"large", "taillemodal"=>"fluid"],
-            ["id"=>6, "img"=>"certif_php_mysql.png", "tailleimg"=>"large", "taillemodal"=>"fluid"],
-            ["id"=>7, "img"=>"certif_debut_react.png", "tailleimg"=>"large", "taillemodal"=>"fluid", "fin"=>true],
+            ["id"=>0, "img"=>"certif_secnumacademie.png", "tailleimg"=>"large", "taillemodal"=>"fluid", "nom"=>"Attestation de suivi SecNum Académie", "position"=>"top left"],
+            ["id"=>1, "img"=>"certif_toeic.png", "tailleimg"=>"small", "taillemodal"=>"centered big", "nom"=>"Certificat TOEIC Listening and Reading Test", "position"=>"top center"],
+            ["id"=>2, "img"=>"certif_html_css.png", "tailleimg"=>"large", "taillemodal"=>"fluid", "nom"=>"Certificat HTML5 et CSS3", "position"=>"top center"],
+            ["id"=>3, "img"=>"certif_javascript.png", "tailleimg"=>"large", "taillemodal"=>"fluid", "nom"=>"Certificat JavaScript", "position"=>"top right", "fin"=>true],
+            ["id"=>4, "img"=>"certif_app_android.png", "tailleimg"=>"large", "taillemodal"=>"fluid", "nom"=>"Certificat application Android", "position"=>"top left"],
+            ["id"=>5, "img"=>"certif_sql.png", "tailleimg"=>"large", "taillemodal"=>"fluid", "nom"=>"Certificat SQL", "position"=>"top center"],
+            ["id"=>6, "img"=>"certif_php_mysql.png", "tailleimg"=>"large", "taillemodal"=>"fluid", "nom"=>"Certificat PHP et MySQL", "position"=>"top center"],
+            ["id"=>7, "img"=>"certif_debut_react.png", "tailleimg"=>"large", "taillemodal"=>"fluid", "nom"=>"Certificat React", "position"=>"top right", "fin"=>true],
+            ["id"=>8, "img"=>"certif_symfony5.png", "tailleimg"=>"large", "taillemodal"=>"fluid", "nom"=>"Certificat Symfony 5", "position"=>"top left"],
+            ["id"=>9, "img"=>"certif_javascript_web.png", "tailleimg"=>"large", "taillemodal"=>"fluid", "nom"=>"Certificat JavaScript web", "position"=>"top center"],
+            ["id"=>10, "img"=>"certif_angular.png", "tailleimg"=>"large", "taillemodal"=>"fluid", "nom"=>"Certificat Angular", "position"=>"top center"],
+            ["id"=>11, "img"=>"certif_springboot.png", "tailleimg"=>"large", "taillemodal"=>"fluid", "nom"=>"Certificat Spring Boot", "position"=>"top right", "fin"=>true],
+            ["id"=>12, "img"=>"certif_owasp.png", "tailleimg"=>"large", "taillemodal"=>"fluid", "nom"=>"Certificat OWASP", "position"=>"top center", "fin"=>true],
         ];
 
         $veilles = [
@@ -395,6 +485,14 @@ class MainController extends \controllers\ControllerBase{
                             ]
                         ],
                     ]],
+                    ["p"=>[
+                        [
+                            "text"=>"Le webdesign peut prendre différentes formes et suis différents courants 
+                            esthétiques comme dans le graphisme. 
+                            Il est donc important de se tenir à jour des modes en matière de design si l’on veut créer 
+                            des interfaces web ou mobiles."
+                        ]
+                    ]],
                 ]
             ],
 
@@ -497,6 +595,15 @@ class MainController extends \controllers\ControllerBase{
                                 ],
                                 ["text"=>" des colonnes qui ne sont pas soumises au défilement horizontal."],
                             ]
+                        ],
+                    ]],
+                    ["p"=>[
+                        [
+                            "text"=>"Fomantic-UI est un outil très utile pour la mise en page de site et application. 
+                            Il a été créé par la communauté des utilisateurs de Semantic-UI. 
+                            Ce dernier n’étant plus mis à jour, la communauté a décidé de poursuivre ce framework 
+                            en éditant de nouvelles versions régulièrement. 
+                            Je vous tiendrai au courant des prochaines évolutions."
                         ],
                     ]],
                     ["p"=>[
