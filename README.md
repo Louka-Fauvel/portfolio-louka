@@ -1,4 +1,12 @@
-# portfolio-louka-fauvel
+# Bienvenue sur la v3 de mon portfolio
+
+**Objectif :** Créer un portfolio afin de promouvoir mes compétences dans le cadre professionnel.
+
+**Langages utilisés :** HTML, CSS, PHP, JavaScript, Framework (Fomantic-UI) et Ubiquity
+
+**Screenshots :**
+
+![Accueil](/documents/portfolio3_accueil.png)
 
 This README outlines the details of collaborating on this Ubiquity application.
 A short introduction of this app could easily go here.
